@@ -115,4 +115,14 @@ describe('tracking-parzer', () => {
       done(err);
     });
   });
+
+  it('should return TZ raw command', () => {
+    const data = {
+      instruction: 'reboot',
+      password: 897463,
+      device: 'tz'
+    };
+    const raw = tracking.parseCommand(data);
+    expect(raw).to.eql('*897463,991#');
+  });
 });

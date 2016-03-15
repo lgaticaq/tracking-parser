@@ -89,8 +89,17 @@ const parse = (raw, options = {}) => {
   });
 };
 
+const parseCommand = (data) => {
+  let command = null;
+  if (data.device === 'tz') {
+    command = tz.parseCommand(data);
+  }
+  return command;
+};
+
 module.exports = {
   getImei: getImei,
   setCache: setCache,
-  parse: parse
+  parse: parse,
+  parseCommand: parseCommand
 };
