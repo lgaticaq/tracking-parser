@@ -2,7 +2,6 @@
 
 import bscoords from 'bscoords';
 import meitrack from 'meitrack-parser';
-import moment from 'moment';
 import Promise from 'bluebird';
 import rg from 'simple-reverse-geocoder';
 import tz from 'tz-parser';
@@ -66,16 +65,6 @@ const addAddress = (data) => {
   });
 };
 
-const checkCurrentInfoPanel = (datetime) => {
-  moment.locale('es');
-  const now = moment.utc();
-  now.subtract(1, 'minutes');
-  return {
-    isCurrent: now < moment.utc(datetime),
-    diff: moment.duration(now.diff(datetime)).humanize()
-  };
-};
-
 const parse = (raw, options = {}) => {
   return new Promise((resolve, reject) => {
     let data = {raw: raw.toString()};
@@ -85,7 +74,6 @@ const parse = (raw, options = {}) => {
       data = meitrack.parse(raw);
     }
     if (data.type !== 'data') return resolve(data);
-    data.currentData = checkCurrentInfoPanel(data.datetime);
     data.gps = data.loc ? 'enable' : 'disable';
     addLoc(data, options).then(addAddress).then(resolve).catch(reject);
   });

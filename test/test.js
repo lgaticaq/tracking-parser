@@ -55,8 +55,6 @@ describe('tracking-parzer', () => {
       expect(data.odometer).to.eql(0.6376);
       expect(data.serialId).to.eql(100);
       expect(data.valid).to.be.a.true;
-      expect(data.currentData.isCurrent).to.be.a.false;
-      expect(data.currentData.diff).to.be.a.string;
       expect(data.gps).to.eql('enable');
       expect(data.address).to.eql('Robles 13180, Lo Barnechea');
       done();
@@ -106,8 +104,6 @@ describe('tracking-parzer', () => {
       expect(data.status.output['6']).to.be.false;
       expect(data.status.output['7']).to.be.false;
       expect(data.status.output['8']).to.be.false;
-      expect(data.currentData.isCurrent).to.be.a.false;
-      expect(data.currentData.diff).to.be.a.string;
       expect(data.gps).to.eql('enable');
       expect(data.address).to.eql('Ja Ela-Ekala-Gampaha-Yakkala Hwy, Sri Lanka');
       done();
