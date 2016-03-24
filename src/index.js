@@ -55,12 +55,14 @@ const addLoc = (data, options = {}) => {
 };
 
 const addAddress = (data) => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     if (!data.loc) return resolve(data);
     rg.getAddress(data.loc).then(address => {
       data.address = address;
       resolve(data);
-    }).catch(reject);
+    }).catch(() => {
+      resolve(data);
+    });
   });
 };
 
