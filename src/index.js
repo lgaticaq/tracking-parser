@@ -83,6 +83,8 @@ const parseCommand = (data) => {
   let command = null;
   if (data.device === 'tz') {
     command = tz.parseCommand(data);
+  } else if (data.device === 'meitrack') {
+    command = meitrack.parseCommand(data);
   }
   return command;
 };

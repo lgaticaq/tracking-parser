@@ -3,7 +3,7 @@
 import tracking from '../lib';
 import {expect} from 'chai';
 
-describe('tracking-parzer', () => {
+describe('tracking-parser', () => {
   it('should return imei from TZ-AVL05 data', () => {
     const raw = new Buffer('$$B6869444005480041|AA$GPRMC,194329.000,A,3321.6735,S,07030.7640,W,0.00,0.00,090216,,,A*6C|02.1|01.3|01.7|000000000000|20160209194326|13981188|00000000|32D3A03F|0000|0.6376|0100|995F\r\n');
     const imei = tracking.getImei(raw);
@@ -120,5 +120,15 @@ describe('tracking-parzer', () => {
     };
     const raw = tracking.parseCommand(data);
     expect(raw).to.eql('*897463,991#');
+  });
+
+  it('should return Meitrack raw command', () => {
+    const data = {
+      instruction: '1_on',
+      imei: 353358017784062,
+      device: 'meitrack'
+    };
+    const raw = tracking.parseCommand(data);
+    expect(raw).to.match(/^@@([\x41-\x7A])(\d{1,3}),353358017784062,C01,0,10000\*([0-9A-F]{2})\r\n$/);
   });
 });
