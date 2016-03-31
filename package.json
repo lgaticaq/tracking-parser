@@ -38,7 +38,7 @@
     "bscoords": "0.0.1",
     "meitrack-parser": "0.1.0",
     "simple-reverse-geocoder": "^1.1.0",
-    "tz-parser": "^2.3.0"
+    "tz-parser": "^2.3.1"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
