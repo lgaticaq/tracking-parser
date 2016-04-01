@@ -131,4 +131,22 @@ describe('tracking-parser', () => {
     const raw = tracking.parseCommand(data);
     expect(raw).to.match(/^@@([\x41-\x7A])(\d{1,3}),353358017784062,C01,0,10000\*([0-9A-F]{2})\r\n$/);
   });
+
+  it('should return TZ raw command reboot', () => {
+    const data = {
+      password: 897463,
+      device: 'TZ-AVL05'
+    };
+    const raw = tracking.getRebootCommand(data);
+    expect(raw).to.eql('*897463,991#');
+  });
+
+  it('should return Meitrack raw command reboot', () => {
+    const data = {
+      imei: 353358017784062,
+      device: 'MVT380'
+    };
+    const raw = tracking.getRebootCommand(data);
+    expect(raw).to.match(/^@@([\x41-\x7A])(\d{1,3}),353358017784062,F02\*([0-9A-F]{2})\r\n$/);
+  });
 });
