@@ -71,7 +71,7 @@ describe('tracking-parser', () => {
       expect(data.type).to.eql('data');
       expect(data.imei).to.eql(862170013556541);
       expect(data.command).to.eql('AAA');
-      expect(data.event).to.eql('timeIntervalTracking');
+      expect(data.alarm.type).to.eql('Gps');
       expect(data.loc.type).to.eql('Point');
       expect(data.loc.coordinates).to.eql([79.960473, 7.092076]);
       expect(data.datetime).to.eql(new Date('2014-04-12T13:28:08.000Z'));
