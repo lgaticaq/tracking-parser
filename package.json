@@ -37,7 +37,7 @@
     "bluebird": "^3.3.4",
     "bscoords": "0.0.1",
     "meitrack-parser": "0.3.3",
-    "simple-reverse-geocoder": "^1.1.0",
+    "simple-reverse-geocoder": "^1.2.0",
     "tz-parser": "^2.4.2"
   },
   "devDependencies": {
