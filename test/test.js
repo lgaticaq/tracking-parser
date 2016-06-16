@@ -1,7 +1,7 @@
 'use strict';
 
-import tracking from '../lib';
-import {expect} from 'chai';
+const tracking = require('../src');
+const expect = require('chai').expect;
 
 describe('tracking-parser', () => {
   it('should return imei from TZ-AVL05 data', () => {

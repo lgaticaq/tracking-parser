@@ -1,18 +1,18 @@
 'use strict';
 
-import bscoords from 'bscoords';
-import meitrack from 'meitrack-parser';
-import Promise from 'bluebird';
-import rg from 'simple-reverse-geocoder';
-import tz from 'tz-parser';
+const bscoords = require('bscoords');
+const meitrack = require('meitrack-parser');
+const Promise = require('bluebird');
+const rg = require('simple-reverse-geocoder');
+const tz = require('tz-parser');
 
 Promise.promisifyAll(bscoords);
 
-const setCache = (instance) => {
+const setCache = instance => {
   rg.setCache(instance);
 };
 
-const getImei = (raw) => {
+const getImei = raw => {
   const data = raw.toString();
   let imei;
   if (tz.patterns.avl05.test(data)) {
@@ -53,7 +53,7 @@ const addLoc = (data, options = {}) => {
   });
 };
 
-const addAddress = (data) => {
+const addAddress = data => {
   return new Promise((resolve) => {
     if (!data.loc) return resolve(data);
     rg.getAddress(data.loc).then(address => {
@@ -79,7 +79,7 @@ const parse = (raw, options = {}) => {
   });
 };
 
-const parseCommand = (data) => {
+const parseCommand = data => {
   let command = null;
   if (data.device === 'tz') {
     command = tz.parseCommand(data);
@@ -89,7 +89,7 @@ const parseCommand = (data) => {
   return command;
 };
 
-const getRebootCommand = (data) => {
+const getRebootCommand = data => {
   let command = null;
   if (/TZ-AVL(05|08|201)/.test(data.device)) {
     command = tz.getRebootCommand(data.password || '000000');
