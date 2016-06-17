@@ -2,6 +2,7 @@
 
 const bscoords = require('bscoords');
 const meitrack = require('meitrack-parser');
+const cellocator = require('cellocator-parser');
 const Promise = require('bluebird');
 const rg = require('simple-reverse-geocoder');
 const tz = require('tz-parser');
@@ -23,6 +24,8 @@ const getImei = raw => {
     imei = tz.patterns.avl201.exec(data)[2];
   } else if (meitrack.patterns.mvt380.test(data)) {
     imei = meitrack.patterns.mvt380.exec(data)[3];
+  } else if (cellocator.patterns.data.test(data)) {
+    imei = cellocator.getImei(data);
   }
   return imei;
 };
@@ -72,6 +75,8 @@ const parse = (raw, options = {}) => {
       data = tz.parse(raw);
     } else if (meitrack.isMeitrack(raw)) {
       data = meitrack.parse(raw);
+    } else if (cellocator.isCello(raw)) {
+      data = cellocator.parse(raw);
     }
     if (data.type !== 'data') return resolve(data);
     data.gps = data.loc ? 'enable' : 'disable';

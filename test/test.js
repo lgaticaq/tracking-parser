@@ -16,7 +16,7 @@ describe('tracking-parser', () => {
     expect(imei).to.eql('862170013556541');
   });
 
-  it('should return TZ-AVL05 data parsed', (done) => {
+  it('should return TZ-AVL05 data parsed', done => {
     const raw = new Buffer('$$B6869444005480041|AA$GPRMC,194329.000,A,3321.6735,S,07030.7640,W,0.00,0.00,090216,,,A*6C|02.1|01.3|01.7|000000000000|20160209194326|13981188|00000000|32D3A03F|0000|0.6376|0100|995F\r\n');
     tracking.parse(raw).then(data => {
       expect(data.raw).to.eql(raw.toString());
@@ -63,7 +63,7 @@ describe('tracking-parser', () => {
     });
   });
 
-  it('should return MVT380 raw data parsed', (done) => {
+  it('should return MVT380 raw data parsed', done => {
     const raw = new Buffer('$$A138,862170013556541,AAA,35,7.092076,79.960473,140412132808,A,10,9,57,275,1,14,5783799,7403612,413|1|F6E0|3933,0000,000B|0009||02D8|0122,*EE\r\n');
     tracking.parse(raw).then(data => {
       expect(data.raw).to.eql(raw.toString());
@@ -106,6 +106,39 @@ describe('tracking-parser', () => {
       expect(data.status.output['8']).to.be.false;
       expect(data.gps).to.eql('enable');
       expect(data.address).to.eql('Ja Ela-Ekala-Gampaha-Yakkala Hwy, Sri Lanka');
+      done();
+    }).catch(err => {
+      done(err);
+    });
+  });
+
+  it('should return cellocator raw data parsed', done => {
+    const raw = new Buffer('4d43475000bdda0b0000060ddf20041017002000e3c40000baeff3c6b6224502000000000000ea65000402090daec5f7cb302cff3357000038090000930a002a170c03e007c1');
+    tracking.parse(raw).then(data => {
+      expect(data.raw).to.eql(raw.toString());
+      expect(data.device).to.eql('CelloTrack');
+      expect(data.type).to.eql('data');
+      expect(data.loc.type).to.eql('Point');
+      expect(data.loc.coordinates).to.eql([-79.09097658351084, -7.953307941260071]);
+      expect(data.speed).to.eql(84.96);
+      expect(data.datetime).to.eql('2016-03-12T23:42:00.000Z');
+      expect(data.direction).to.eql(155.09967514191385);
+      expect(data.satellites).to.eql(9);
+      expect(data.voltage.ada).to.eql(28.1176470588165);
+      expect(data.voltage.adb).to.eql(4.00235293989);
+      expect(data.voltage.adc).to.eql(45.41720000000001);
+      expect(data.voltage.add).to.eql(182);
+      expect(data.altitude).to.eql(223.23000000000002);
+      expect(data.status.engine).to.be.false;
+      expect(data.status.unlockInactive).to.be.true;
+      expect(data.status.panicInactive).to.be.true;
+      expect(data.status.drivingStatus).to.be.true;
+      expect(data.status.shockInactive).to.be.true;
+      expect(data.status.doorInactive).to.be.true;
+      expect(data.status.ignitionPortStatus).to.be.true;
+      expect(data.status.accelerometerStatus).to.be.true;
+      expect(data.status.lock).to.be.true;
+      expect(data.version).to.eql('HW: <223>, SW: <32>');
       done();
     }).catch(err => {
       done(err);
