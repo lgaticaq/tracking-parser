@@ -1,3 +1,20 @@
+### 1.1.0 (2016-6-17)
+
+##### Chores
+
+* **package:**
+  * Add keyword cellocator ([0cfee5f1](https://github.com/lgaticaq/tracking-parser/commit/0cfee5f1d703fcf17f853bd86b6d55ec0cf96e92))
+  * Update dependencies ([132341cb](https://github.com/lgaticaq/tracking-parser/commit/132341cb05cf6872f7c42eccd570caf8c25000ed))
+* **parser:** Add cellocator parser ([ebd533c8](https://github.com/lgaticaq/tracking-parser/commit/ebd533c877a1c0d579500c7515bdde8941369390))
+
+##### Documentation Changes
+
+* **readme:** Add parser availables ([52b5694b](https://github.com/lgaticaq/tracking-parser/commit/52b5694b463ebbcd9c323ad73d511edc6b942a5d))
+
+##### Bug Fixes
+
+* **src:** Fix get arguments in addLoc and parse ([8f00c419](https://github.com/lgaticaq/tracking-parser/commit/8f00c41990e38408898bf307a356feab5e8c3308))
+
 ## 1.0.0 (2016-6-16)
 
 ##### Chores
