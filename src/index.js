@@ -41,8 +41,9 @@ const getLoc = (mcc, mnc, lac, cid) => {
   });
 };
 
-const addLoc = (data, options = {}) => {
+const addLoc = (data, options) => {
   return new Promise((resolve) => {
+    options = options || {};
     data.gps = data.loc ? 'enable' : 'disable';
     if (data.gps === 'enable') return resolve(data);
     const mcc = options.mcc || 730;
@@ -68,8 +69,9 @@ const addAddress = data => {
   });
 };
 
-const parse = (raw, options = {}) => {
+const parse = (raw, options) => {
   return new Promise((resolve, reject) => {
+    options = options || {};
     let data = {raw: raw.toString()};
     if (tz.isTz(raw)) {
       data = tz.parse(raw);
