@@ -16,6 +16,12 @@ describe('tracking-parser', () => {
     expect(imei).to.eql('862170013556541');
   });
 
+  it('should return imei from cellocator data', () => {
+    const raw = new Buffer('4d43475000aac30c00000aa84e2104161d002001c30400002a69e291b600000042f7830fea440000a0000000000000000000000000000000000000000000202d03000000005e', 'hex');
+    const imei = tracking.getImei(raw);
+    expect(imei).to.eql('357247050053442');
+  });
+
   it('should return TZ-AVL05 data parsed', done => {
     const raw = new Buffer('$$B6869444005480041|AA$GPRMC,194329.000,A,3321.6735,S,07030.7640,W,0.00,0.00,090216,,,A*6C|02.1|01.3|01.7|000000000000|20160209194326|13981188|00000000|32D3A03F|0000|0.6376|0100|995F\r\n');
     tracking.parse(raw).then(data => {

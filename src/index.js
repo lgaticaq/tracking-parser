@@ -24,8 +24,8 @@ const getImei = raw => {
     imei = tz.patterns.avl201.exec(data)[2];
   } else if (meitrack.patterns.mvt380.test(data)) {
     imei = meitrack.patterns.mvt380.exec(data)[3];
-  } else if (cellocator.patterns.data.test(data)) {
-    imei = cellocator.getImei(data);
+  } else if (cellocator.patterns.data.test(raw.toString('hex'))) {
+    imei = cellocator.getImei(raw).toString();
   }
   return imei;
 };
