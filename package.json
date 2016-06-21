@@ -35,9 +35,9 @@
   },
   "homepage": "https://github.com/lgaticaq/tracking-parser#readme",
   "dependencies": {
-    "bluebird": "^3.4.0",
+    "bluebird": "^3.4.1",
     "bscoords": "^0.0.1",
-    "cellocator-parser": "^0.1.0",
+    "cellocator-parser": "^0.1.1",
     "meitrack-parser": "^0.3.3",
     "simple-reverse-geocoder": "^1.2.1",
     "tz-parser": "^2.4.2"
@@ -48,7 +48,7 @@
     "coveralls": "^2.11.9",
     "eslint": "2.13.1",
     "generate-changelog": "^1.0.2",
-    "istanbul": "^0.4.3",
+    "istanbul": "^0.4.4",
     "mocha": "^2.5.3"
   },
   "eslintConfig": {
