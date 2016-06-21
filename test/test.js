@@ -113,9 +113,9 @@ describe('tracking-parser', () => {
   });
 
   it('should return cellocator raw data parsed', done => {
-    const raw = new Buffer('4d43475000bdda0b0000060ddf20041017002000e3c40000baeff3c6b6224502000000000000ea65000402090daec5f7cb302cff3357000038090000930a002a170c03e007c1');
+    const raw = new Buffer('4d43475000bdda0b0000060ddf20041017002000e3c40000baeff3c6b6224502000000000000ea65000402090daec5f7cb302cff3357000038090000930a002a170c03e007c1', 'hex');
     tracking.parse(raw).then(data => {
-      expect(data.raw).to.eql(raw.toString());
+      expect(data.raw).to.eql(raw.toString('hex'));
       expect(data.device).to.eql('CelloTrack');
       expect(data.type).to.eql('data');
       expect(data.loc.type).to.eql('Point');
