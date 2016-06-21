@@ -1,3 +1,16 @@
+#### 1.1.1 (2016-6-21)
+
+##### Chores
+
+* **package:**
+  * update cellocator-parser to version 0.1.1 ([6f82fcce](https://github.com/lgaticaq/tracking-parser/commit/6f82fcce708f0a671f7a965f7d611030d14302d4))
+  * Update dependencies ([f69e34aa](https://github.com/lgaticaq/tracking-parser/commit/f69e34aa157f7798c054aa64f4cd54d018c60953))
+  * update eslint to version 2.13.1 ([1592bc79](https://github.com/lgaticaq/tracking-parser/commit/1592bc79ca8c53e70c999c48e5c029b856b75e9d))
+
+##### Bug Fixes
+
+* **parser:** Fix cellocator getImei ([5c5249db](https://github.com/lgaticaq/tracking-parser/commit/5c5249dbe548a2e1bcc6c9869cafc58c154e9281))
+
 ### 1.1.0 (2016-6-17)
 
 ##### Chores
