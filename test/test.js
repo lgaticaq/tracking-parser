@@ -188,4 +188,12 @@ describe('tracking-parser', () => {
     const raw = tracking.getRebootCommand(data);
     expect(raw).to.match(/^@@([\x41-\x7A])(\d{1,3}),353358017784062,F02\*([0-9A-F]{2})\r\n$/);
   });
+
+  it('should return a cellocator ACK command', () => {
+    const unitId = 836522;
+    const commandNumerator = 1;
+    const messageNumerator = 80;
+    const ack = tracking.getCellocatorAck(unitId, commandNumerator, messageNumerator);
+    expect(ack).to.eql(new Buffer('4D43475004AAC30C00010000000000500000000000000000000000CE', 'hex'));
+  });
 });

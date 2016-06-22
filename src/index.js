@@ -111,5 +111,6 @@ module.exports = {
   setCache: setCache,
   parse: parse,
   parseCommand: parseCommand,
-  getRebootCommand: getRebootCommand
+  getRebootCommand: getRebootCommand,
+  getCellocatorAck: cellocator.ack
 };
