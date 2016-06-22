@@ -1,3 +1,9 @@
+#### 1.2.1 (2016-6-22)
+
+##### Chores
+
+* **package:** Update cellocator ([fc37e726](https://github.com/lgaticaq/tracking-parser/commit/fc37e726bdc3489e429634e5fef98d7f112d5a9a))
+
 ### 1.2.0 (2016-6-22)
 
 ##### Chores
