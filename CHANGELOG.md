@@ -1,3 +1,15 @@
+### 1.2.0 (2016-6-22)
+
+##### Chores
+
+* **package:**
+  * Update cellocator-parser ([39a9e93b](https://github.com/lgaticaq/tracking-parser/commit/39a9e93bab25a3b25b71bafab49f161cd922e1c3))
+  * update cellocator-parser to version 0.2.0 ([ad2810d5](https://github.com/lgaticaq/tracking-parser/commit/ad2810d51fe1f14c9009aa3ac3f5da6c1263be0c))
+
+##### New Features
+
+* **commands:** Add get cellocator ACK ([2d24ef33](https://github.com/lgaticaq/tracking-parser/commit/2d24ef3354ef2590c450f0739dded3707555c9e7))
+
 #### 1.1.2 (2016-6-22)
 
 ##### Chores
