@@ -1,3 +1,20 @@
+#### 1.2.2 (2016-6-24)
+
+##### Chores
+
+* **package:**
+  * update tz-parser to version 2.4.3 ([60f0c9f2](https://github.com/lgaticaq/tracking-parser/commit/60f0c9f206acc9951d643d228185aeb0c2c620cb))
+  * Update tz-parser ([ce55532f](https://github.com/lgaticaq/tracking-parser/commit/ce55532fb074d0dca7c2efd6e3a1569c74433c41))
+  * update cellocator-parser to version 1.0.2 ([760f1db8](https://github.com/lgaticaq/tracking-parser/commit/760f1db842ac3830038cc86d5a8c5ea397a302c7))
+  * update cellocator-parser to version 1.0.1 ([48ea605d](https://github.com/lgaticaq/tracking-parser/commit/48ea605dfd5e357c000d0b909021b30c44e5f67f))
+  * update cellocator-parser to version 1.0.0 ([6a9255c0](https://github.com/lgaticaq/tracking-parser/commit/6a9255c0aeff63162474c0d9eafc69b035f6fea4))
+  * update simple-reverse-geocoder to version 1.2.2 ([1ff6c45a](https://github.com/lgaticaq/tracking-parser/commit/1ff6c45a8f269b2793b417b4beb07efae3f00fb3))
+  * update cellocator-parser to version 0.2.2 ([50caab30](https://github.com/lgaticaq/tracking-parser/commit/50caab305f4c25a1c7b12c05568dbb31e4b8c503))
+
+##### New Features
+
+* **cellocator:** Add setClient in setCache ([da87edae](https://github.com/lgaticaq/tracking-parser/commit/da87edaef8ef5ac086785b41ae121ba5425a1c02))
+
 #### 1.2.1 (2016-6-22)
 
 ##### Chores
