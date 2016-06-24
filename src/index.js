@@ -11,6 +11,7 @@ Promise.promisifyAll(bscoords);
 
 const setCache = instance => {
   rg.setCache(instance);
+  cellocator.setClient({client: instance});
 };
 
 const getImei = raw => {
@@ -69,21 +70,32 @@ const addAddress = data => {
   });
 };
 
-const parse = (raw, options) => {
+const enableLoc = (data, options) => {
   return new Promise((resolve, reject) => {
     options = options || {};
-    let data = {raw: raw.toString()};
-    if (tz.isTz(raw)) {
-      data = tz.parse(raw);
-    } else if (meitrack.isMeitrack(raw)) {
-      data = meitrack.parse(raw);
-    } else if (cellocator.isCello(raw)) {
-      data = cellocator.parse(raw);
-    }
     if (data.type !== 'data') return resolve(data);
     data.gps = data.loc ? 'enable' : 'disable';
     addLoc(data, options).then(addAddress).then(resolve).catch(reject);
   });
+};
+
+const parse = (raw, options) => {
+  options = options || {};
+  let data = {raw: raw.toString()};
+  if (tz.isTz(raw)) {
+    data = tz.parse(raw);
+  } else if (meitrack.isMeitrack(raw)) {
+    data = meitrack.parse(raw);
+  } else if (cellocator.isCello(raw)) {
+    return cellocator.parse(raw).then(data => {
+      if (Object.prototype.toString.call(data) === '[object Array]') {
+        return Promise.all(data.map(x => enableLoc(x, options)));
+      } else {
+        return enableLoc(data, options);
+      }
+    });
+  }
+  return enableLoc(data, options);
 };
 
 const parseCommand = data => {
