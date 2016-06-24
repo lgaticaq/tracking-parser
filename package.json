@@ -40,7 +40,7 @@
     "cellocator-parser": "^1.0.2",
     "meitrack-parser": "^0.3.3",
     "simple-reverse-geocoder": "^1.2.2",
-    "tz-parser": "^2.4.2"
+    "tz-parser": "^2.4.3"
   },
   "devDependencies": {
     "chai": "^3.5.0",
