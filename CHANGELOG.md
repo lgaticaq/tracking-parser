@@ -109,7 +109,7 @@
 * Fix meitrack test ([4d09919](https://github.com/lgaticaq/tracking-parser/commit/4d09919))
 * Update dependencies ([f09f517](https://github.com/lgaticaq/tracking-parser/commit/f09f517))
 
-#### 0.4.0 (2016-04-01)
+### 0.4.0 (2016-04-01)
 
 * Add getRebootCommand ([ed1a78d](https://github.com/lgaticaq/tracking-parser/commit/ed1a78d))
 * Update dependencies ([7c8ece2](https://github.com/lgaticaq/tracking-parser/commit/7c8ece2))
@@ -118,7 +118,7 @@
 
 * Update tz-parser ([2fe6705](https://github.com/lgaticaq/tracking-parser/commit/2fe6705))
 
-#### 0.3.0 (2016-03-29)
+### 0.3.0 (2016-03-29)
 
 * Add parse command from meitrack ([5dffaca](https://github.com/lgaticaq/tracking-parser/commit/5dffaca))
 * Update dependencies ([cfe46fd](https://github.com/lgaticaq/tracking-parser/commit/cfe46fd))
@@ -129,7 +129,7 @@
 * Remove currentData ([3f3cfa6](https://github.com/lgaticaq/tracking-parser/commit/3f3cfa6))
 * Update dependencies ([e50f396](https://github.com/lgaticaq/tracking-parser/commit/e50f396))
 
-#### 0.2.0 (2016-03-15)
+### 0.2.0 (2016-03-15)
 
 * Add parseCommand ([07d2711](https://github.com/lgaticaq/tracking-parser/commit/07d2711))
 * Change licence year ([58e1d89](https://github.com/lgaticaq/tracking-parser/commit/58e1d89))
@@ -139,7 +139,7 @@
 
 * Update dependencies ([eabdbd6](https://github.com/lgaticaq/tracking-parser/commit/eabdbd6))
 
-#### 0.1.0 (2016-03-02)
+### 0.1.0 (2016-03-02)
 
 * Add parse ([9a539d6](https://github.com/lgaticaq/tracking-parser/commit/9a539d6))
 * Trigger ([e22cafa](https://github.com/lgaticaq/tracking-parser/commit/e22cafa))
