@@ -87,15 +87,13 @@ const parse = (raw, options) => {
   } else if (meitrack.isMeitrack(raw)) {
     data = meitrack.parse(raw);
   } else if (cellocator.isCello(raw)) {
-    return cellocator.parse(raw).then(data => {
-      if (Object.prototype.toString.call(data) === '[object Array]') {
-        return Promise.all(data.map(x => enableLoc(x, options)));
-      } else {
-        return enableLoc(data, options);
-      }
-    });
+    data = cellocator.parse(raw);
   }
-  return enableLoc(data, options);
+  if (Object.prototype.toString.call(data) === '[object Array]') {
+    return Promise.all(data.map(x => enableLoc(x, options)));
+  } else {
+    return enableLoc(data, options);
+  }
 };
 
 const parseCommand = data => {

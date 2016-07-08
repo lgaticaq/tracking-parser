@@ -122,6 +122,7 @@ describe('tracking-parser', () => {
     const raw = new Buffer('4d43475000bdda0b0000060ddf20041017002000e3c40000baeff3c6b6224502000000000000ea65000402090daec5f7cb302cff3357000038090000930a002a170c03e007c1', 'hex');
     tracking.parse(raw).then(data => {
       expect(data.raw).to.eql(raw.toString('hex'));
+      expect(data.unitId).to.eql(776893);
       expect(data.device).to.eql('CelloTrack');
       expect(data.type).to.eql('data');
       expect(data.loc.type).to.eql('Point');
@@ -135,16 +136,24 @@ describe('tracking-parser', () => {
       expect(data.voltage.adc).to.eql(45.41720000000001);
       expect(data.voltage.add).to.eql(182);
       expect(data.altitude).to.eql(223.23000000000002);
+      expect(data.status.input['1']).to.be.false;
+      expect(data.status.input['2']).to.be.false;
+      expect(data.status.input['3']).to.be.false;
+      expect(data.status.input['4']).to.be.false;
+      expect(data.status.input['5']).to.be.true;
+      expect(data.status.output['1']).to.be.false;
+      expect(data.status.output['2']).to.be.false;
+      expect(data.status.output['3']).to.be.false;
+      expect(data.status.output['4']).to.be.false;
+      expect(data.status.output['5']).to.be.false;
+      expect(data.status.output['6']).to.be.false;
+      expect(data.status.sos).to.be.false;
       expect(data.status.engine).to.be.false;
-      expect(data.status.unlockInactive).to.be.true;
-      expect(data.status.panicInactive).to.be.true;
-      expect(data.status.drivingStatus).to.be.true;
-      expect(data.status.shockInactive).to.be.true;
-      expect(data.status.doorInactive).to.be.true;
-      expect(data.status.ignitionPortStatus).to.be.true;
-      expect(data.status.accelerometerStatus).to.be.true;
-      expect(data.status.lock).to.be.true;
-      expect(data.version).to.eql('HW: <223>, SW: <32>');
+      expect(data.status.driving).to.be.false;
+      expect(data.status.accelerometer).to.be.true;
+      expect(data.hardware.model).to.eql('Cello-IQ');
+      expect(data.hardware.modem).to.eql('Telit GE864, automative');
+      expect(data.valid).to.be.true;
       done();
     }).catch(err => {
       done(err);
