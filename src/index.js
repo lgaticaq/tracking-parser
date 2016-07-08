@@ -11,7 +11,6 @@ Promise.promisifyAll(bscoords);
 
 const setCache = instance => {
   rg.setCache(instance);
-  cellocator.setClient({client: instance});
 };
 
 const getImei = raw => {
