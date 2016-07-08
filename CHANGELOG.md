@@ -1,3 +1,13 @@
+#### 1.2.3 (2016-7-8)
+
+##### Chores
+
+* **cellocator:** Change parser to new api of cellocator. ([d01c2e4f](https://github.com/lgaticaq/tracking-parser/commit/d01c2e4fde214272b3c02583d0703e9dd8499b64))
+* **package:**
+  * update cellocator-parser to version 2.0.0 ([150da7e9](https://github.com/lgaticaq/tracking-parser/commit/150da7e9814b4c73d1c0fca67a409aa141f86c18))
+  * update eslint to version 3.0.1 ([bee7a781](https://github.com/lgaticaq/tracking-parser/commit/bee7a7811b81e973500e026284a63da84ffdee60))
+  * update eslint to version 3.0.0 ([57df23bf](https://github.com/lgaticaq/tracking-parser/commit/57df23bfda034dc8f721f49039c3f47ebd84d9a0))
+
 #### 1.2.2 (2016-6-24)
 
 ##### Chores
