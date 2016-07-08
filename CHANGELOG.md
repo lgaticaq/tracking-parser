@@ -1,3 +1,9 @@
+#### 1.2.4 (2016-7-8)
+
+##### Bug Fixes
+
+* **src:** Fix setCache ([c964fe68](https://github.com/lgaticaq/tracking-parser/commit/c964fe68143ecfdfeb5ac4aedde7885d1dbc8a3d))
+
 #### 1.2.3 (2016-7-8)
 
 ##### Chores
