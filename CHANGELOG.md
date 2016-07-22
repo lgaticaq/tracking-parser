@@ -1,3 +1,15 @@
+#### 1.2.5 (2016-7-22)
+
+##### Chores
+
+* **package:**
+  * Update coveralls ([5b02ed5f](https://github.com/lgaticaq/tracking-parser/commit/5b02ed5fa3b8056b69e90d3b81bad2dddcec7dc4))
+  * update eslint to version 3.1.1 ([128dc302](https://github.com/lgaticaq/tracking-parser/commit/128dc302a5fad5c8e3b9019f4822fee92c1ed4c6))
+
+##### Bug Fixes
+
+* **parser:** Fix get device in getRebootCommand. ([1dcbd01a](https://github.com/lgaticaq/tracking-parser/commit/1dcbd01a44c6d1cc7a1e1989f29eb72441047858))
+
 #### 1.2.4 (2016-7-8)
 
 ##### Bug Fixes
