@@ -107,9 +107,9 @@ const parseCommand = data => {
 
 const getRebootCommand = data => {
   let command = null;
-  if (/TZ-AVL(05|08|201)/.test(data.device)) {
+  if (data.device === 'tz') {
     command = tz.getRebootCommand(data.password || '000000');
-  } else if (/MVT380/.test(data.device)) {
+  } else if (data.device === 'meitrack') {
     command = meitrack.getRebootCommand(data.imei);
   }
   return command;

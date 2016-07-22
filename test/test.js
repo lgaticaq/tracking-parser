@@ -183,7 +183,7 @@ describe('tracking-parser', () => {
   it('should return TZ raw command reboot', () => {
     const data = {
       password: 897463,
-      device: 'TZ-AVL05'
+      device: 'tz'
     };
     const raw = tracking.getRebootCommand(data);
     expect(raw).to.eql('*897463,991#');
@@ -192,7 +192,7 @@ describe('tracking-parser', () => {
   it('should return Meitrack raw command reboot', () => {
     const data = {
       imei: 353358017784062,
-      device: 'MVT380'
+      device: 'meitrack'
     };
     const raw = tracking.getRebootCommand(data);
     expect(raw).to.match(/^@@([\x41-\x7A])(\d{1,3}),353358017784062,F02\*([0-9A-F]{2})\r\n$/);
