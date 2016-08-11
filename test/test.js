@@ -177,7 +177,7 @@ describe('tracking-parser', () => {
       device: 'meitrack'
     };
     const raw = tracking.parseCommand(data);
-    expect(raw).to.match(/^@@([\x41-\x7A])(\d{1,3}),353358017784062,C01,0,10000\*([0-9A-F]{2})\r\n$/);
+    expect(raw).to.match(/^@@([\x41-\x7A])(\d{1,3}),353358017784062,C01,0,12222\*([0-9A-F]{2})\r\n$/);
   });
 
   it('should return TZ raw command reboot', () => {
