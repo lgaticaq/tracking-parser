@@ -37,7 +37,7 @@
   "dependencies": {
     "bluebird": "^3.4.1",
     "bscoords": "^0.0.1",
-    "cellocator-parser": "^2.0.0",
+    "cellocator-parser": "^2.1.0",
     "meitrack-parser": "^0.3.4",
     "simple-reverse-geocoder": "^1.2.2",
     "tz-parser": "^2.4.4"
@@ -45,7 +45,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "codeclimate-test-reporter": "^0.3.3",
-    "coveralls": "^2.11.11",
+    "coveralls": "^2.11.12",
     "eslint": "3.2.2",
     "generate-changelog": "^1.0.2",
     "istanbul": "^0.4.4",
