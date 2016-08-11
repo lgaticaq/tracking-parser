@@ -3,4 +3,5 @@ const tracking = require('tracking-parser');
 const tz = new Buffer('$$B6869444005480041|91$GPRMC,194329.000,A,3321.6735,S,07030.7640,W,0.00,0.00,090216,,,A*6C|02.1|01.3|01.7|000000000000|20160209194326|13981188|00000000|32D3A03F|0000|0.6376|0100|7B20\r\n');
 const meitrack = new Buffer('$$A138,862170013556541,AAA,35,7.092076,79.960473,140412132808,A,10,9,57,275,1,14,5783799,7403612,413|1|F6E0|3933,0000,000B|0009||02D8|0122,*EE\r\n');
 const cellocator = new Buffer('4d43475000bdda0b0000060ddf20041017002000e3c40000baeff3c6b6224502000000000000ea65000402090daec5f7cb302cff3357000038090000930a002a170c03e007c1', 'hex');
-const data = await Promise.all(tracking.parse(tz), tracking.parse(meitrack), tracking.parse(cellocator));
+const queclink = new Buffer('+RESP:GTFRI,250504,135790246811220,,,00,1,1,4.3,92,70.0,121.354335,31.222073,20090214013254,0460,0000,18d8,6141,00,2000.0,12345:12:34,,,80,210100,,,,20090214093254,11F0$');
+await Promise.all([tracking.parse(tz), tracking.parse(meitrack), tracking.parse(cellocator), tracking.parse(queclink)]);

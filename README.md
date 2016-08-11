@@ -15,6 +15,7 @@ Parser availables:
 * [tz-parser](https://www.npmjs.com/package/tz-parser)
 * [meitrack-parser](https://www.npmjs.com/package/meitrack-parser)
 * [cellocator-parser](https://www.npmjs.com/package/cellocator-parser)
+* [queclink-parser](https://www.npmjs.com/package/queclink-parser)
 
 ## Installation
 

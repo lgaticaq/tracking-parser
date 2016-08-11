@@ -3,6 +3,7 @@
 const bscoords = require('bscoords');
 const meitrack = require('meitrack-parser');
 const cellocator = require('cellocator-parser');
+const queclink = require('queclink-parser');
 const Promise = require('bluebird');
 const rg = require('simple-reverse-geocoder');
 const tz = require('tz-parser');
@@ -26,6 +27,8 @@ const getImei = raw => {
     imei = meitrack.patterns.mvt380.exec(data)[3];
   } else if (cellocator.patterns.data.test(raw.toString('hex'))) {
     imei = cellocator.getImei(raw).toString();
+  } else if (queclink.isQueclink(raw)) {
+    imei = queclink.getImei(raw).toString();
   }
   return imei;
 };
@@ -87,6 +90,8 @@ const parse = (raw, options) => {
     data = meitrack.parse(raw);
   } else if (cellocator.isCello(raw)) {
     data = cellocator.parse(raw);
+  } else if (queclink.isQueclink(raw)) {
+    data = queclink.parse(raw);
   }
   if (Object.prototype.toString.call(data) === '[object Array]') {
     return Promise.all(data.map(x => enableLoc(x, options)));
@@ -101,6 +106,8 @@ const parseCommand = data => {
     command = tz.parseCommand(data);
   } else if (data.device === 'meitrack') {
     command = meitrack.parseCommand(data);
+  } else if (data.device === 'queclink') {
+    command = queclink.parseCommand(data);
   }
   return command;
 };
@@ -111,6 +118,8 @@ const getRebootCommand = data => {
     command = tz.getRebootCommand(data.password || '000000');
   } else if (data.device === 'meitrack') {
     command = meitrack.getRebootCommand(data.imei);
+  } else if (data.device === 'queclink') {
+    command = queclink.getRebootCommand(data.password, data.serial);
   }
   return command;
 };
