@@ -1,3 +1,25 @@
+### 1.3.0 (2016-8-11)
+
+##### Chores
+
+* **package:**
+  * Update dependencies ([bfa78c79](https://github.com/lgaticaq/tracking-parser/commit/bfa78c792773229d9fdaf75c3c4db9f7e02526ba))
+  * update tz-parser to version 2.4.4 ([1a223d56](https://github.com/lgaticaq/tracking-parser/commit/1a223d56970a729e7eab66b11420a7f9f8fce8b6))
+  * update mocha to version 3.0.2 ([b7cf7463](https://github.com/lgaticaq/tracking-parser/commit/b7cf7463f908b36e8ab8dc64406455feb71fb5d1))
+  * update mocha to version 3.0.1 ([c8f13831](https://github.com/lgaticaq/tracking-parser/commit/c8f138315c312bdb6eb59b38e3874412525a4558))
+  * update meitrack-parser to version 0.3.4 ([300a6370](https://github.com/lgaticaq/tracking-parser/commit/300a63706e0919c883a5a3619f59357ccea304b1))
+  * update eslint to version 3.2.2 ([3fa306c9](https://github.com/lgaticaq/tracking-parser/commit/3fa306c9af63b57b7adceffba39ef7ea38d8dd91))
+  * update mocha to version 3.0.0 ([d6caecc6](https://github.com/lgaticaq/tracking-parser/commit/d6caecc6cf994a7bdb4bb0cb2e24c3632c766d5c))
+  * update eslint to version 3.2.0 ([fa202234](https://github.com/lgaticaq/tracking-parser/commit/fa202234800b29696eaee3d3098b445e1b9a8523))
+
+##### New Features
+
+* **parser:** Add queclink-parser ([d0ed06a0](https://github.com/lgaticaq/tracking-parser/commit/d0ed06a018cda55eb8ab2077549a188d95ae3c4d))
+
+##### Bug Fixes
+
+* **test:** Fix meitrack parseCommand test ([309d85d9](https://github.com/lgaticaq/tracking-parser/commit/309d85d9b759788ab5359e179b17052f046233a1))
+
 #### 1.2.5 (2016-7-22)
 
 ##### Chores
