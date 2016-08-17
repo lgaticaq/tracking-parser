@@ -1,3 +1,15 @@
+#### 1.3.1 (2016-8-17)
+
+##### Chores
+
+* **package:**
+  * update eslint to version 3.3.1 ([7e5d7e71](https://github.com/lgaticaq/tracking-parser/commit/7e5d7e718539de9f050b29195e38136dbf7f2a30))
+  * update eslint to version 3.3.0 ([914c95c0](https://github.com/lgaticaq/tracking-parser/commit/914c95c068cc8cc13bdaf0f4988cd21f1dfd8026))
+
+##### New Features
+
+* **package:** Update cellocator-parser to 2.2.0 ([026bca7e](https://github.com/lgaticaq/tracking-parser/commit/026bca7e77f9e20560f6c5f68ba299f18f6811e6))
+
 ### 1.3.0 (2016-8-11)
 
 ##### Chores
