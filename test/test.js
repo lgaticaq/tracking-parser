@@ -131,6 +131,7 @@ describe('tracking-parser', () => {
       expect(data.unitId).to.eql(776893);
       expect(data.device).to.eql('CelloTrack');
       expect(data.type).to.eql('data');
+      expect(data.alarm.type).to.eql('ConnectionUp');
       expect(data.loc.type).to.eql('Point');
       expect(data.loc.coordinates).to.eql([-79.09097658351084, -7.953307941260071]);
       expect(data.speed).to.eql(84.96);
