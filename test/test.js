@@ -181,7 +181,7 @@ describe('tracking-parser', () => {
       expect(data.temperature).to.be.null;
       expect(data.history).to.be.false;
       expect(data.sentTime).to.eql(new Date('2016-08-11T18:00:25.000Z'));
-      expect(data.serialId).to.eql(7);
+      expect(data.serialId).to.eql(1976);
       expect(data.alarm.type).to.eql('Gps');
       expect(data.loc.type).to.eql('Point');
       expect(data.loc.coordinates).to.eql([-70.514613, -33.36128]);
