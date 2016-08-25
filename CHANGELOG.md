@@ -1,3 +1,9 @@
+#### 1.4.1 (2016-8-25)
+
+##### Chores
+
+* **package:** Update queclink-parser ([67c94cb9](https://github.com/lgaticaq/tracking-parser/commit/67c94cb96567240662fd481fb0a86d8a636155a7))
+
 ### 1.4.0 (2016-8-25)
 
 ##### Chores
