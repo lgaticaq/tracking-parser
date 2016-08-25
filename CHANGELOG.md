@@ -1,3 +1,9 @@
+#### 1.4.2 (2016-8-25)
+
+##### Bug Fixes
+
+* **test:** Fix queclink test ([31db6ad9](https://github.com/lgaticaq/tracking-parser/commit/31db6ad95cc12906580c0bfa5fa066f7eb32df25))
+
 #### 1.4.1 (2016-8-25)
 
 ##### Chores
