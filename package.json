@@ -36,9 +36,9 @@
   },
   "homepage": "https://github.com/lgaticaq/tracking-parser#readme",
   "dependencies": {
-    "bluebird": "^3.4.3",
+    "bluebird": "^3.4.4",
     "bscoords": "^0.0.1",
-    "cellocator-parser": "^2.2.3",
+    "cellocator-parser": "^2.2.4",
     "meitrack-parser": "^0.4.0",
     "queclink-parser": "^0.2.3",
     "simple-reverse-geocoder": "^1.2.2",
