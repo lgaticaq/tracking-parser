@@ -15,21 +15,8 @@ const setCache = instance => {
 };
 
 const getImei = raw => {
-  const data = raw.toString();
-  let imei;
-  if (tz.patterns.avl05.test(data)) {
-    imei = tz.patterns.avl05.exec(data)[2];
-  } else if (tz.patterns.avl08.test(data)) {
-    imei = tz.patterns.avl08.exec(data)[2];
-  } else if (tz.patterns.avl201.test(data)) {
-    imei = tz.patterns.avl201.exec(data)[2];
-  } else if (meitrack.patterns.mvt380.test(data)) {
-    imei = meitrack.patterns.mvt380.exec(data)[3];
-  } else if (cellocator.patterns.data.test(raw.toString('hex'))) {
-    imei = cellocator.getImei(raw).toString();
-  } else if (queclink.isQueclink(raw)) {
-    imei = queclink.getImei(raw).toString();
-  }
+  const fns = [tz.getImei, meitrack.getImei, cellocator.getImei, queclink.getImei];
+  const imei = fns.map(x => x(raw)).find(x => x !== null) || null;
   return imei;
 };
 
