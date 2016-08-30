@@ -1,3 +1,9 @@
+#### 1.4.4 (2016-8-30)
+
+##### Chores
+
+* **package:** Update dependencies ([28065ae4](https://github.com/lgaticaq/tracking-parser/commit/28065ae44dd984971c1d2bcced342b27758da36b))
+
 #### 1.4.3 (2016-8-30)
 
 ##### Chores
