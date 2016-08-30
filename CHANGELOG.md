@@ -1,3 +1,12 @@
+#### 1.4.3 (2016-8-30)
+
+##### Chores
+
+* **parser:** Simplified getImei ([af8a1575](https://github.com/lgaticaq/tracking-parser/commit/af8a15757f4fddf183f98973a449070e688dff53))
+* **package:**
+  * Update dependencies ([a3f52332](https://github.com/lgaticaq/tracking-parser/commit/a3f5233206b4a461791ebfa2a92cdfc53856a41f))
+  * update eslint to version 3.4.0 ([66e876c9](https://github.com/lgaticaq/tracking-parser/commit/66e876c92879bdb1ee74d795511606bd66e8b593))
+
 #### 1.4.2 (2016-8-25)
 
 ##### Bug Fixes
