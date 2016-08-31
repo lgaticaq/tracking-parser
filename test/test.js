@@ -219,6 +219,16 @@ describe('tracking-parser', () => {
     });
   });
 
+  it('should return null raw command', () => {
+    const data = {
+      instruction: 'reboot',
+      password: 897463,
+      device: 'asdasda'
+    };
+    const raw = tracking.parseCommand(data);
+    expect(raw).to.be.null;
+  });
+
   it('should return TZ raw command', () => {
     const data = {
       instruction: 'reboot',
@@ -237,6 +247,17 @@ describe('tracking-parser', () => {
     };
     const raw = tracking.parseCommand(data);
     expect(raw).to.match(/^@@([\x41-\x7A])(\d{1,3}),353358017784062,C01,0,12222\*([0-9A-F]{2})\r\n$/);
+  });
+
+  it('should return Cellocator raw command', () => {
+    const data = {
+      unitId: 836522,
+      commandNumerator: 1,
+      instruction: '1_on',
+      device: 'cellocator'
+    };
+    const raw = tracking.parseCommand(data);
+    expect(raw).to.eql(new Buffer('4d43475000aac30c0001000000000003000300140014000000000000a8', 'hex'));
   });
 
   it('should return queclink raw command', () => {

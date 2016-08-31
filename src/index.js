@@ -89,12 +89,14 @@ const parse = (raw, options) => {
 
 const parseCommand = data => {
   let command = null;
-  if (data.device === 'tz') {
-    command = tz.parseCommand(data);
-  } else if (data.device === 'meitrack') {
-    command = meitrack.parseCommand(data);
-  } else if (data.device === 'queclink') {
-    command = queclink.parseCommand(data);
+  const fns = {
+    tz: tz.parseCommand,
+    meitrack: meitrack.parseCommand,
+    cellocator: cellocator.parseCommand,
+    queclink: queclink.parseCommand
+  };
+  if (fns.hasOwnProperty(data.device)) {
+    command = fns[data.device](data);
   }
   return command;
 };
