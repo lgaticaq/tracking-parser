@@ -40,7 +40,7 @@
     "bscoords": "^0.0.1",
     "cellocator-parser": "^2.2.4",
     "meitrack-parser": "^0.4.0",
-    "queclink-parser": "^0.2.4",
+    "queclink-parser": "^0.2.5",
     "simple-reverse-geocoder": "^1.2.2",
     "tz-parser": "^2.5.0"
   },

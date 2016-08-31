@@ -274,7 +274,7 @@ describe('tracking-parser', () => {
       device: 'queclink'
     };
     const raw = tracking.parseCommand(data);
-    expect(raw).to.eql('AT+GTOUT=101010,1,0,0,1,0,0,0,0,0,1,0,0,0,1111,03f2$');
+    expect(raw).to.eql('AT+GTOUT=101010,1,0,0,1,0,0,0,0,0,1,0,0,0,0,,,03f2$');
   });
 
   it('should return TZ raw command reboot', () => {
