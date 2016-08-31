@@ -263,7 +263,7 @@ describe('tracking-parser', () => {
   it('should return queclink raw command', () => {
     const data = {
       password: '101010',
-      serial: '1010',
+      serial: 1010,
       instruction: '2_on',
       previousOutput: {
         '1': true,
@@ -274,7 +274,7 @@ describe('tracking-parser', () => {
       device: 'queclink'
     };
     const raw = tracking.parseCommand(data);
-    expect(raw).to.eql('AT+GTOUT=101010,1,0,0,1,0,0,0,0,0,1,0,0,0,1111,1010$');
+    expect(raw).to.eql('AT+GTOUT=101010,1,0,0,1,0,0,0,0,0,1,0,0,0,1111,03f2$');
   });
 
   it('should return TZ raw command reboot', () => {
