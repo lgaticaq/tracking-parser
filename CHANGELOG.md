@@ -1,3 +1,13 @@
+### 1.5.0 (2016-8-31)
+
+##### Chores
+
+* **package:** Update bluebird ([d2cd7a4e](https://github.com/lgaticaq/tracking-parser/commit/d2cd7a4ef52901a5d873a9d3797e14d0851cec51))
+
+##### New Features
+
+* **parser:** Add parse commands of cellocator devices ([3ec79368](https://github.com/lgaticaq/tracking-parser/commit/3ec793680ff7de80ac36fd03d9939f7e5d45b845))
+
 #### 1.4.4 (2016-8-30)
 
 ##### Chores
