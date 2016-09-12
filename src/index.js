@@ -33,7 +33,6 @@ const getLoc = (mcc, mnc, lac, cid) => {
 
 const addLoc = (data, options) => {
   return new Promise((resolve) => {
-    options = options || {};
     data.gps = data.loc ? 'enable' : 'disable';
     if (data.gps === 'enable') return resolve(data);
     const mcc = options.mcc || 730;
@@ -61,7 +60,6 @@ const addAddress = data => {
 
 const enableLoc = (data, options) => {
   return new Promise((resolve, reject) => {
-    options = options || {};
     if (data.type !== 'data') return resolve(data);
     data.gps = data.loc ? 'enable' : 'disable';
     addLoc(data, options).then(addAddress).then(resolve).catch(reject);
