@@ -8,7 +8,7 @@ const Promise = require('bluebird');
 const rg = require('simple-reverse-geocoder');
 const tz = require('tz-parser');
 
-Promise.promisifyAll(bscoords);
+Promise.promisify(bscoords.requestGoogle);
 
 const setCache = instance => {
   rg.setCache(instance);
@@ -38,7 +38,6 @@ const addLoc = (data, options) => {
     const mcc = options.mcc || 730;
     const mnc = options.mnc || 1;
     getLoc(mcc, mnc, data.lac, data.cid).then(loc => {
-      if (!loc) return resolve(data);
       data.loc = loc;
       data.gps = 'triangulation';
       resolve(data);
