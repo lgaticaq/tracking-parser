@@ -1,7 +1,47 @@
 'use strict';
 
-const tracking = require('../src');
 const expect = require('chai').expect;
+const proxyquire = require('proxyquire');
+
+const bscoordsStub = {
+  requestGoogle: (mcc, mnc, lac, cid, cb) => {
+    if (mcc === 1) {
+      cb(new Error('Not found'));
+    } else if (mcc === 2) {
+      cb(null, {lat: -35.362024, lon: -71.51566});
+    } else {
+      cb(null, {lat: -33.362024, lon: -70.51566});
+    }
+  },
+  requestGoogleAsync: (mcc) => {
+    return new Promise((resolve, reject) => {
+      if (mcc === 1) {
+        reject(new Error('Not found'));
+      } else if (mcc === 2) {
+        resolve({lat: -35.362024, lon: -71.51566});
+      } else {
+        resolve({lat: -33.362024, lon: -70.51566});
+      }
+    });
+  }
+};
+const rgStub = {
+  getAddress: loc => {
+    return new Promise((resolve, reject) => {
+      if (loc.coordinates[0] === -71.51566) {
+        reject(new Error('Not found'));
+      } else {
+        resolve('Av. La Dehesa 538');
+      }
+    });
+  }
+};
+proxyquire('../src/index.js', {
+  bscoords: bscoordsStub,
+  'simple-reverse-geocoder': rgStub
+});
+
+const tracking = require('../src');
 
 describe('tracking-parser', () => {
   it('should return imei from TZ-AVL05 data', () => {
@@ -28,11 +68,55 @@ describe('tracking-parser', () => {
     expect(imei).to.eql('135790246811220');
   });
 
+  it('should return imei from UNKNOWN data', () => {
+    const raw = new Buffer('asdasdasdasdasdsadasdasdasdasdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdsadasdasdasdasd');
+    const imei = tracking.getImei(raw);
+    expect(imei).to.be.null;
+  });
+
   it('should return UNKNOWN data', done => {
     const raw = new Buffer('asdasdasdasdasdsadasdasdasdasdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdsadasdasdasdasd');
     tracking.parse(raw).then(data => {
       expect(data.raw).to.eql(raw.toString());
       expect(data.type).to.eql('UNKNOWN');
+      done();
+    }).catch(err => {
+      done(err);
+    });
+  });
+
+  it('should return TZ-AVL05 data with empty GPS and not found loc', done => {
+    const raw = new Buffer('$$AE869444005480041|AA000000000000000000000000000000000000000000000000000000000000|02.1|01.3|01.7|000000000000|20160209194326|13981188|00000000|32D3A03F|0000|0.6376|0100|6CCB\r\n');
+    tracking.parse(raw, {mcc: 1}).then(data => {
+      expect(data.raw).to.eql(raw.toString());
+      expect(data.loc).to.eql(null);
+      expect(data.address).to.be.undefined;
+      done();
+    }).catch(err => {
+      done(err);
+    });
+  });
+
+  it('should return TZ-AVL05 data with empty GPS and not found address', done => {
+    const raw = new Buffer('$$AE869444005480041|AA000000000000000000000000000000000000000000000000000000000000|02.1|01.3|01.7|000000000000|20160209194326|13981188|00000000|32D3A03F|0000|0.6376|0100|6CCB\r\n');
+    tracking.parse(raw, {mcc: 2}).then(data => {
+      expect(data.raw).to.eql(raw.toString());
+      expect(data.loc.type).to.eql('Point');
+      expect(data.loc.coordinates).to.eql([-71.51566, -35.362024]);
+      expect(data.address).to.be.undefined;
+      done();
+    }).catch(err => {
+      done(err);
+    });
+  });
+
+  it('should return TZ-AVL05 data with empty GPS', done => {
+    const raw = new Buffer('$$AE869444005480041|AA000000000000000000000000000000000000000000000000000000000000|02.1|01.3|01.7|000000000000|20160209194326|13981188|00000000|32D3A03F|0000|0.6376|0100|6CCB\r\n');
+    tracking.parse(raw).then(data => {
+      expect(data.raw).to.eql(raw.toString());
+      expect(data.loc.type).to.eql('Point');
+      expect(data.loc.coordinates).to.eql([-70.51566, -33.362024]);
+      expect(data.address).to.eql('Av. La Dehesa 538');
       done();
     }).catch(err => {
       done(err);
@@ -80,7 +164,7 @@ describe('tracking-parser', () => {
       expect(data.serialId).to.eql(100);
       expect(data.valid).to.be.a.true;
       expect(data.gps).to.eql('enable');
-      expect(data.address).to.eql('Robles 13180, Lo Barnechea');
+      expect(data.address).to.eql('Av. La Dehesa 538');
       done();
     }).catch(err => {
       done(err);
@@ -129,7 +213,7 @@ describe('tracking-parser', () => {
       expect(data.status.output['7']).to.be.false;
       expect(data.status.output['8']).to.be.false;
       expect(data.gps).to.eql('enable');
-      expect(data.address).to.eql('Ja Ela-Ekala-Gampaha-Yakkala Hwy, Sri Lanka');
+      expect(data.address).to.eql('Av. La Dehesa 538');
       done();
     }).catch(err => {
       done(err);
@@ -173,6 +257,7 @@ describe('tracking-parser', () => {
       expect(data.hardware.model).to.eql('Cello-IQ');
       expect(data.hardware.modem).to.eql('Telit GE864, automative');
       expect(data.valid).to.be.true;
+      expect(data.address).to.eql('Av. La Dehesa 538');
       done();
     }).catch(err => {
       done(err);
@@ -225,6 +310,7 @@ describe('tracking-parser', () => {
       expect(data.cid).to.eql(51081);
       expect(data.odometer).to.eql(0);
       expect(data.hourmeter).to.eql('00001:33:08');
+      expect(data.address).to.eql('Av. La Dehesa 538');
       done();
     }).catch(err => {
       done(err);
@@ -289,6 +375,12 @@ describe('tracking-parser', () => {
     expect(raw).to.eql('AT+GTOUT=101010,1,0,0,1,0,0,0,0,0,1,0,0,0,0,,,03f2$');
   });
 
+  it('should return null raw command reboot', () => {
+    const data = {device: 'asdf'};
+    const raw = tracking.getRebootCommand(data);
+    expect(raw).to.be.null;
+  });
+
   it('should return TZ raw command reboot', () => {
     const data = {
       password: 897463,
@@ -296,6 +388,12 @@ describe('tracking-parser', () => {
     };
     const raw = tracking.getRebootCommand(data);
     expect(raw).to.eql('*897463,991#');
+  });
+
+  it('should return TZ raw command reboot without password', () => {
+    const data = {device: 'tz'};
+    const raw = tracking.getRebootCommand(data);
+    expect(raw).to.eql('*000000,991#');
   });
 
   it('should return Meitrack raw command reboot', () => {
