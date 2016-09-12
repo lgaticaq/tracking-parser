@@ -1,3 +1,22 @@
+#### 1.5.3 (2016-9-12)
+
+##### Chores
+
+* **test:**
+  * Add new tests ([a75b5a4f](https://github.com/lgaticaq/tracking-parser/commit/a75b5a4f2da83d7725f13ffaa2f417aa51c03ee7))
+  * Add UNKNOWN test ([e21a26da](https://github.com/lgaticaq/tracking-parser/commit/e21a26da27856ac23b53e7d375c0d3a808444d5b))
+* **src:**
+  * Only promisify requestGoogle. Remove unused code ([a9840f79](https://github.com/lgaticaq/tracking-parser/commit/a9840f7914e2e251516a54b1ea197e4af7c44374))
+  * Remove unused code ([ae3aeb23](https://github.com/lgaticaq/tracking-parser/commit/ae3aeb232604f303074c624823cb7931ecb7da83))
+  * Reduce complex in parse ([5fdbad99](https://github.com/lgaticaq/tracking-parser/commit/5fdbad99fe9911f674109c60085f94012e1d31da))
+* **package:**
+  * Add proxyquire ([bdf6ccaf](https://github.com/lgaticaq/tracking-parser/commit/bdf6ccaf9b73ff388ac83a3a4b439ab7a4daff6c))
+  * Update dependencies ([4cbeef25](https://github.com/lgaticaq/tracking-parser/commit/4cbeef251519d3612cc15d4ca22f7c97ca0f06fe))
+  * update eslint to version 3.5.0 ([7d6dd78c](https://github.com/lgaticaq/tracking-parser/commit/7d6dd78c6365e9a630423182d50d7ab2eb33b1b3))
+  * update tz-parser to version 2.6.1 ([13312123](https://github.com/lgaticaq/tracking-parser/commit/13312123a3ad835d0b160d1d78dfd174145e95ad))
+  * update tz-parser to version 2.6.0 ([197558a3](https://github.com/lgaticaq/tracking-parser/commit/197558a3ae5c107021085cb79e9d2db7397b6536))
+  * update queclink-parser to version 0.2.5 ([19d654ad](https://github.com/lgaticaq/tracking-parser/commit/19d654addd7070782826500e5515345ab1205747))
+
 #### 1.5.2 (2016-8-31)
 
 ##### Chores
