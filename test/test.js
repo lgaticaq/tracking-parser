@@ -28,11 +28,23 @@ describe('tracking-parser', () => {
     expect(imei).to.eql('135790246811220');
   });
 
+  it('should return UNKNOWN data', done => {
+    const raw = new Buffer('asdasdasdasdasdsadasdasdasdasdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdsadasdasdasdasd');
+    tracking.parse(raw).then(data => {
+      expect(data.raw).to.eql(raw.toString());
+      expect(data.type).to.eql('UNKNOWN');
+      done();
+    }).catch(err => {
+      done(err);
+    });
+  });
+
   it('should return TZ-AVL05 data parsed', done => {
     const raw = new Buffer('$$B6869444005480041|AA$GPRMC,194329.000,A,3321.6735,S,07030.7640,W,0.00,0.00,090216,,,A*6C|02.1|01.3|01.7|000000000000|20160209194326|13981188|00000000|32D3A03F|0000|0.6376|0100|995F\r\n');
     tracking.parse(raw).then(data => {
       expect(data.raw).to.eql(raw.toString());
-      expect(data.device).to.eql('TZ-AVL05');
+      expect(data.device).to.eql('tz');
+      expect(data.model).to.eql('TZ-AVL05');
       expect(data.type).to.eql('data');
       expect(data.imei).to.eql('869444005480041');
       expect(data.alarm.type).to.eql('Gps');
