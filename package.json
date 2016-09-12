@@ -51,7 +51,8 @@
     "eslint": "3.5.0",
     "generate-changelog": "^1.0.2",
     "istanbul": "^0.4.5",
-    "mocha": "^3.0.2"
+    "mocha": "^3.0.2",
+    "proxyquire": "^1.7.10"
   },
   "eslintConfig": {
     "env": {
