@@ -70,16 +70,8 @@ const enableLoc = (data, options) => {
 
 const parse = (raw, options) => {
   options = options || {};
-  let data = {raw: raw.toString()};
-  if (tz.isTz(raw)) {
-    data = tz.parse(raw);
-  } else if (meitrack.isMeitrack(raw)) {
-    data = meitrack.parse(raw);
-  } else if (cellocator.isCello(raw)) {
-    data = cellocator.parse(raw);
-  } else if (queclink.isQueclink(raw)) {
-    data = queclink.parse(raw);
-  }
+  const fns = [tz.parse, meitrack.parse, cellocator.parse, queclink.parse];
+  const data = fns.map(x => x(raw)).find(x => x.type !== 'UNKNOWN') || {raw: raw.toString(), type: 'UNKNOWN'};
   if (Object.prototype.toString.call(data) === '[object Array]') {
     return Promise.all(data.map(x => enableLoc(x, options)));
   } else {
