@@ -1,3 +1,12 @@
+#### 1.5.4 (2016-9-27)
+
+##### Chores
+
+* **package:**
+  * Update dependencies ([91db0bf8](https://github.com/lgaticaq/tracking-parser/commit/91db0bf8c49274d964230b312459f673742fff6e))
+  * update eslint to version 3.6.1 ([066ed3b7](https://github.com/lgaticaq/tracking-parser/commit/066ed3b75859ddc933cfc526108f989878cf05fe))
+  * update eslint to version 3.6.0 ([5451385c](https://github.com/lgaticaq/tracking-parser/commit/5451385ce5803b9dea11f4195ed89ff0b4a017fe))
+
 #### 1.5.3 (2016-9-12)
 
 ##### Chores
