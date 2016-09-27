@@ -9,9 +9,9 @@ addons:
     packages:
     - g++-4.8
 node_js:
-  - "4"
-  - "5"
-  - "6"
+  - '4'
+  - '5'
+  - '6'
 notifications:
   email: false
 after_success:
@@ -19,3 +19,10 @@ after_success:
   - npm run codeclimate
 services:
   - redis-server
+deploy:
+  provider: releases
+  api_key:
+    secure: LwrOgG/hO/cR5O/mIyTBfI7LK5ghAb6MfH5X4zhr5CNczVVzxQOx0dd5HalzAshhB/FlD8wTqTy+xuChTvMovTMHY+szjTiiFdIGeEOD74AbM7rlojDx8TNPPsHIazVJ6oxL+WfAmM6k0VRm5xvjEUsKyCq/uJo2rgpTSHPDVFJpuib10PavG2lWaaTf9Gigm6AFKydSIREMWihLW0LbsPaq82n6O7LR/mZxFI8QGSkH501a3JXHLvjZgJX9GwVrgcYm7dbSaIxDUsipxYWrboaG0tidY3p0f5O7Wgb4ofa66QwH+4UweT5DliFrvBNcgll/18RRjjtpOepMbe/ujo+B2pxajzQimHvP0oUxKowWfJ1spap+iO95eD326dFByf6o3TmQHEoReiR5FtHDTh+WqBY9Myl9ah+CW80up4jAuFoU0DX0lZ2zGTP9PuSJZe5MQ+TA98Q4WSXsh/x5XosiyHvcgJ6WYXhXuW8nDkclmIUwhaCc48sZONvpOQYVqyn0OQMb80FfE9zKvwnnNDY9L0qnHtBbkB2c0wRfmpM0qtLdZcEF2F/k4tcDhaVhBJlKgMdZEl7XTworp31yHFz2kkpwQ+ajzdW/hTIb0RhTRhZ3Ml2FgBPi/3oTKF4h8UpwJD3mSc7MBbjQ1cjHtP1vZuGDTCVGmG1alHbdhlI=
+  file: ''
+  on:
+    repo: lgaticaq/tracking-parser
