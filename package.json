@@ -40,18 +40,18 @@
     "bscoords": "^0.0.1",
     "cellocator-parser": "^2.2.4",
     "meitrack-parser": "^0.4.0",
-    "queclink-parser": "^0.2.7",
+    "queclink-parser": "^0.2.8",
     "simple-reverse-geocoder": "^1.2.2",
     "tz-parser": "^2.6.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "codeclimate-test-reporter": "^0.3.3",
-    "coveralls": "^2.11.12",
+    "coveralls": "^2.11.14",
     "eslint": "3.6.1",
     "generate-changelog": "^1.0.2",
     "istanbul": "^0.4.5",
-    "mocha": "^3.0.2",
+    "mocha": "^3.1.0",
     "proxyquire": "^1.7.10"
   },
   "eslintConfig": {
