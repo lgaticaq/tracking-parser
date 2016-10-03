@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "codeclimate-test-reporter": "^0.3.3",
+    "codeclimate-test-reporter": "^0.4.0",
     "coveralls": "^2.11.14",
     "eslint": "3.6.1",
     "generate-changelog": "^1.0.2",
