@@ -38,20 +38,20 @@
   "dependencies": {
     "bluebird": "^3.4.6",
     "bscoords": "^0.0.1",
-    "cellocator-parser": "^2.2.4",
-    "meitrack-parser": "^0.4.0",
-    "queclink-parser": "^0.2.8",
+    "cellocator-parser": "^2.2.6",
+    "meitrack-parser": "^0.4.1",
+    "queclink-parser": "^0.2.10",
     "simple-reverse-geocoder": "^1.2.2",
-    "tz-parser": "^2.6.1"
+    "tz-parser": "^2.6.3"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "codeclimate-test-reporter": "^0.4.0",
     "coveralls": "^2.11.14",
-    "eslint": "3.7.1",
+    "eslint": "3.8.0",
     "generate-changelog": "^1.0.2",
     "istanbul": "^0.4.5",
-    "mocha": "^3.1.0",
+    "mocha": "^3.1.2",
     "proxyquire": "^1.7.10"
   },
   "eslintConfig": {
