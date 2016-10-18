@@ -272,7 +272,7 @@ describe('tracking-parser', () => {
     tracking.parse(raw).then(data => {
       expect(data.raw).to.eql(raw.toString());
       expect(data.raw).to.eql(raw.toString());
-      // expect(data.manufacturer).to.eql('queclink');
+      expect(data.manufacturer).to.eql('queclink');
       expect(data.device).to.eql('Queclink-GV200');
       expect(data.type).to.eql('data');
       expect(data.imei).to.eql('867844003012625');
