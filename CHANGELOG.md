@@ -1,3 +1,23 @@
+#### 1.5.5 (2016-10-18)
+
+##### Chores
+
+* **package:**
+  * Update queclink-parser ([ac93eb5f](https://github.com/lgaticaq/tracking-parser/commit/ac93eb5f000df276d460fda217900f142138421f))
+  * update eslint to version 3.8.0 ([cb5e1f1d](https://github.com/lgaticaq/tracking-parser/commit/cb5e1f1d8d231221ccf83c2f6ea622515fbd3b65))
+  * Update dependencies ([aa1ebfd0](https://github.com/lgaticaq/tracking-parser/commit/aa1ebfd010519d23866f3fa06eb2081eddb60ed7))
+  * update eslint to version 3.7.1 ([752b6c42](https://github.com/lgaticaq/tracking-parser/commit/752b6c428935189dfe378fe6c82731db5770409d))
+  * update codeclimate-test-reporter to version 0.4.0 ([303a3538](https://github.com/lgaticaq/tracking-parser/commit/303a35386f219f3e06718e48fb9fcc52196aa9a4))
+  * update eslint to version 3.7.0 ([4a349dee](https://github.com/lgaticaq/tracking-parser/commit/4a349dee029fde13dc7076c8c39c9f6f267263d2))
+
+##### Documentation Changes
+
+* **readme:** Update example ([fcee210a](https://github.com/lgaticaq/tracking-parser/commit/fcee210aa9635b5956302ceca725739f6b612b8e))
+
+##### Tests
+
+* **parser:** Add manufacturer test ([bdd23edc](https://github.com/lgaticaq/tracking-parser/commit/bdd23edc1b50714f33e8dfb22db792b5cee5df6f))
+
 #### 1.5.4 (2016-9-27)
 
 ##### Chores
