@@ -39,7 +39,7 @@
     "bluebird": "^3.4.6",
     "bscoords": "^0.0.1",
     "cellocator-parser": "^2.2.6",
-    "meitrack-parser": "^0.4.1",
+    "meitrack-parser": "^1.0.0",
     "queclink-parser": "^0.2.13",
     "simple-reverse-geocoder": "^1.2.2",
     "tz-parser": "^2.6.3"
