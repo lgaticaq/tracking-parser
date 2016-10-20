@@ -1,3 +1,10 @@
+#### 1.5.6 (2016-10-20)
+
+##### Chores
+
+* **package:** Update queclink-parser to v0.2.12 ([4bf02b8e](https://github.com/lgaticaq/tracking-parser/commit/4bf02b8e303c0bb48de4268c8e261ba8abefd3d1))
+* **travis:** Remove deploy ([3aec1908](https://github.com/lgaticaq/tracking-parser/commit/3aec19083d9ba033be5756da6e032ed8a2f41e64))
+
 #### 1.5.5 (2016-10-18)
 
 ##### Chores
