@@ -137,7 +137,7 @@ describe('tracking-parser', () => {
       expect(data.loc.coordinates).to.eql([-70.51273333333333, -33.361225]);
       expect(data.speed).to.eql(0);
       expect(data.gpsStatus).to.be.a.true;
-      expect(data.track).to.eql('0.00');
+      expect(data.azimuth).to.eql(0);
       expect(data.magneticVariation).to.be.null;
       expect(data.gpsMode).to.eql('Autonomous');
       expect(data.pdop).to.eql(2.1);
@@ -185,7 +185,7 @@ describe('tracking-parser', () => {
       expect(data.loc.type).to.eql('Point');
       expect(data.loc.coordinates).to.eql([79.960473, 7.092076]);
       expect(data.datetime).to.eql(new Date('2014-04-12T13:28:08.000Z'));
-      expect(data.gpsSignal).to.eql('A');
+      expect(data.gpsStatus).to.be.true;
       expect(data.satellites).to.eql(10);
       expect(data.gsmSignal).to.eql(9);
       expect(data.speed).to.eql(57);
@@ -197,7 +197,7 @@ describe('tracking-parser', () => {
       expect(data.mcc).to.eql('413');
       expect(data.mnc).to.eql('1');
       expect(data.lac).to.eql(63200);
-      expect(data.ci).to.eql(14643);
+      expect(data.cid).to.eql(14643);
       expect(data.status.input['1']).to.be.false;
       expect(data.status.input['2']).to.be.false;
       expect(data.status.input['3']).to.be.false;

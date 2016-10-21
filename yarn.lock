@@ -983,9 +983,9 @@ longest@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
 
-meitrack-parser@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/meitrack-parser/-/meitrack-parser-0.4.1.tgz#957a9484502fa323bc0b0d5bc06f4dece3023fb0"
+meitrack-parser@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/meitrack-parser/-/meitrack-parser-1.0.0.tgz#65de7f901494d510fc7376c22d3e61b3b85f470f"
   dependencies:
     crc "^3.4.0"
     moment "^2.15.1"
@@ -1073,9 +1073,9 @@ node-geocoder@^3.12.0:
     request "^2.74.0"
     request-promise "^4.1.1"
 
-node-nmea@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/node-nmea/-/node-nmea-1.0.2.tgz#1f2819e0ad8e35d8d98946f9a1b0f7d9428316d9"
+node-nmea@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/node-nmea/-/node-nmea-1.0.3.tgz#558e637ce0e5185b6105b1d3aec7bddeb47f585d"
 
 node-uuid@~1.4.7:
   version "1.4.7"
@@ -1478,13 +1478,13 @@ typedarray@~0.0.5:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-tz-parser@^2.6.3:
-  version "2.6.3"
-  resolved "https://registry.yarnpkg.com/tz-parser/-/tz-parser-2.6.3.tgz#86d958d03c6c4a971daeb2280acabc16c69e375e"
+tz-parser@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/tz-parser/-/tz-parser-3.0.0.tgz#61fe59e367ad9a3cc1efa152d3221b7e94aad7bd"
   dependencies:
     crc "^3.4.0"
     moment "^2.15.1"
-    node-nmea "^1.0.2"
+    node-nmea "^1.0.3"
 
 uglify-js@^2.6:
   version "2.7.3"
