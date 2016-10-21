@@ -1,3 +1,13 @@
+#### 1.5.8 (2016-10-21)
+
+##### Chores
+
+* **package:**
+  * Update dependencies ([dc21011f](https://github.com/lgaticaq/tracking-parser/commit/dc21011f0b6944990ba84ac9d97e2a4929a44251))
+  * update tz-parser to version 3.0.0 ([ef99b6d8](https://github.com/lgaticaq/tracking-parser/commit/ef99b6d8183813a85e2f2822d8a4b573fb5e28dd))
+  * update queclink-parser to version 0.2.14 ([b106a07a](https://github.com/lgaticaq/tracking-parser/commit/b106a07a89907823e7a162836412d2d3624f6a76))
+  * update meitrack-parser to version 1.0.0 ([3a1ef228](https://github.com/lgaticaq/tracking-parser/commit/3a1ef228103f98527007fa174ee71156ff351aa7))
+
 #### 1.5.7 (2016-10-20)
 
 ##### Chores
