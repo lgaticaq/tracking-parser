@@ -1,3 +1,12 @@
+#### 1.5.14 (2016-10-28)
+
+##### Chores
+
+* **package:**
+  * Update yarn ([ef38f01d](https://github.com/lgaticaq/tracking-parser/commit/ef38f01df1999956c79d5526b6a48ab7a9739576))
+  * Fix version eslint ([9b2ea1c8](https://github.com/lgaticaq/tracking-parser/commit/9b2ea1c8861a6e1669efd9fb1b12c770566cb941))
+  * Update dependencies ([28b50bcc](https://github.com/lgaticaq/tracking-parser/commit/28b50bcc7f48961fa89867a8005d61ba98674242))
+
 #### 1.5.13 (2016-10-25)
 
 ##### Chores
