@@ -1219,8 +1219,8 @@ qs@~6.3.0:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.3.0.tgz#f403b264f23bc01228c74131b407f18d5ea5d442"
 
 queclink-parser:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/queclink-parser/-/queclink-parser-0.3.3.tgz#d8adfaa9c05526ec5d6e8118e1ff19d21b5bf722"
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/queclink-parser/-/queclink-parser-0.3.4.tgz#6c4991251aa173958c5503699d3b6fe5ef11a945"
   dependencies:
     lodash "^4.16.4"
     moment "^2.15.2"
