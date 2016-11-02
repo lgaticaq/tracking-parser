@@ -38,8 +38,8 @@ align-text@^0.1.1, align-text@^0.1.3:
     repeat-string "^1.5.2"
 
 amdefine@>=0.0.4:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.0.tgz#fd17474700cb5cc9c2b709f0be9d23ce3c198c33"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
 ansi-escapes@^1.1.0:
   version "1.4.0"
@@ -139,7 +139,7 @@ bl@~1.1.2:
   dependencies:
     readable-stream "~2.0.5"
 
-bluebird@^3.0.6, bluebird@^3.4.1, bluebird@^3.4.6:
+bluebird, bluebird@^3.0.6, bluebird@^3.4.1, bluebird@^3.4.6:
   version "3.4.6"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.6.tgz#01da8d821d87813d158967e743d5fe6c62cf8c0f"
 
@@ -160,7 +160,7 @@ browser-stdout@1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/browser-stdout/-/browser-stdout-1.3.0.tgz#f351d32969d32fa5d7a5567154263d928ae3bd1f"
 
-bscoords@^0.0.1:
+bscoords:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/bscoords/-/bscoords-0.0.1.tgz#c9fff4479add5825cff5800789ca060327f86a5d"
 
@@ -182,7 +182,7 @@ caseless@~0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.11.0.tgz#715b96ea9841593cc33067923f5ec60ebda4f7d7"
 
-cellocator-parser@^2.2.6:
+cellocator-parser:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/cellocator-parser/-/cellocator-parser-2.2.6.tgz#8e6e33f1aaed0bca01b3773a0859bf0aaa45e463"
   dependencies:
@@ -197,7 +197,7 @@ center-align@^0.1.1:
     align-text "^0.1.3"
     lazy-cache "^1.0.3"
 
-chai@^3.5.0:
+chai:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/chai/-/chai-3.5.0.tgz#4d02637b067fe958bdbfdd3a40ec56fef7373247"
   dependencies:
@@ -247,7 +247,7 @@ code-point-at@^1.0.0:
   dependencies:
     number-is-nan "^1.0.0"
 
-codeclimate-test-reporter@^0.4.0:
+codeclimate-test-reporter:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/codeclimate-test-reporter/-/codeclimate-test-reporter-0.4.0.tgz#b5ce10aeed7898016a1b2411acdfaba3c67c2c28"
   dependencies:
@@ -288,7 +288,7 @@ core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-coveralls@^2.11.14:
+coveralls:
   version "2.11.14"
   resolved "https://registry.yarnpkg.com/coveralls/-/coveralls-2.11.14.tgz#645a05ac72aa4f2ee811c667390d4ad36f0c2e26"
   dependencies:
@@ -607,7 +607,7 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
 
-generate-changelog@^1.0.2:
+generate-changelog:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/generate-changelog/-/generate-changelog-1.0.2.tgz#b26116d531a6ac4536a90ef5634121a55088d0eb"
   dependencies:
@@ -854,7 +854,7 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-istanbul@^0.4.5:
+istanbul:
   version "0.4.5"
   resolved "https://registry.yarnpkg.com/istanbul/-/istanbul-0.4.5.tgz#65c7d73d4c4da84d4f3ac310b918fb0b8033733b"
   dependencies:
@@ -996,13 +996,9 @@ lodash.keys@^3.0.0:
     lodash.isarguments "^3.0.0"
     lodash.isarray "^3.0.0"
 
-lodash@^4.0.0, lodash@^4.3.0:
+lodash@^4.0.0, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.16.4, lodash@^4.3.0:
   version "4.16.6"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.16.6.tgz#d22c9ac660288f3843e16ba7d2b5d06cca27d777"
-
-lodash@^4.13.1, lodash@^4.14.0, lodash@^4.16.4:
-  version "4.16.4"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.16.4.tgz#01ce306b9bad1319f2a5528674f88297aeb70127"
 
 log-driver@1.2.5:
   version "1.2.5"
@@ -1012,7 +1008,7 @@ longest@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
 
-meitrack-parser@^1.0.0:
+meitrack-parser:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/meitrack-parser/-/meitrack-parser-1.0.0.tgz#65de7f901494d510fc7376c22d3e61b3b85f470f"
   dependencies:
@@ -1058,7 +1054,7 @@ mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@0.5.1, mkdirp@0.5.x:
   dependencies:
     minimist "0.0.8"
 
-mocha@^3.1.2:
+mocha:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/mocha/-/mocha-3.1.2.tgz#51f93b432bf7e1b175ffc22883ccd0be32dba6b5"
   dependencies:
@@ -1202,7 +1198,7 @@ progress@^1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/progress/-/progress-1.1.8.tgz#e260c78f6161cdd9b0e56cc3e0a85de17c7a57be"
 
-proxyquire@^1.7.10:
+proxyquire:
   version "1.7.10"
   resolved "https://registry.yarnpkg.com/proxyquire/-/proxyquire-1.7.10.tgz#75be0770a81188f4d08bd01dfc30b767365aa20d"
   dependencies:
@@ -1223,8 +1219,8 @@ qs@~6.3.0:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.3.0.tgz#f403b264f23bc01228c74131b407f18d5ea5d442"
 
 queclink-parser:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/queclink-parser/-/queclink-parser-0.3.0.tgz#a307022ec3ca3df7d171569e6a2f21e3faa5dbac"
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/queclink-parser/-/queclink-parser-0.3.1.tgz#a28b8d813397fb9a89b00f300dbff7c830aee998"
   dependencies:
     lodash "^4.16.4"
     moment "^2.15.2"
@@ -1401,7 +1397,7 @@ shelljs@^0.7.5:
     interpret "^1.0.0"
     rechoir "^0.6.2"
 
-simple-reverse-geocoder@^1.2.2:
+simple-reverse-geocoder:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/simple-reverse-geocoder/-/simple-reverse-geocoder-1.2.2.tgz#694cbe886308bb04d0339886dd6922ba7433ada7"
   dependencies:
@@ -1559,7 +1555,7 @@ typedarray@~0.0.5:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-tz-parser@^3.0.1:
+tz-parser:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/tz-parser/-/tz-parser-3.0.1.tgz#38fbca4dd84451a70c190d910b4b938cade2264b"
   dependencies:
