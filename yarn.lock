@@ -296,7 +296,7 @@ coveralls:
     minimist "1.2.0"
     request "2.75.0"
 
-crc@^3.4.0:
+crc@^3.4.0, crc@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/crc/-/crc-3.4.1.tgz#65d5830b1a2569557cfb324c0e679998521473ee"
 
@@ -1554,10 +1554,10 @@ typedarray@~0.0.5:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
 tz-parser:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/tz-parser/-/tz-parser-3.0.1.tgz#38fbca4dd84451a70c190d910b4b938cade2264b"
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/tz-parser/-/tz-parser-3.0.3.tgz#b1e3de8187179d5d9cbf9dd457e73a0c08b85b19"
   dependencies:
-    crc "^3.4.0"
+    crc "^3.4.1"
     moment "^2.15.2"
     node-nmea "^1.0.3"
 
