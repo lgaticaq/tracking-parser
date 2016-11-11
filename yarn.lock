@@ -287,8 +287,8 @@ core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
 coveralls:
-  version "2.11.14"
-  resolved "https://registry.yarnpkg.com/coveralls/-/coveralls-2.11.14.tgz#645a05ac72aa4f2ee811c667390d4ad36f0c2e26"
+  version "2.11.15"
+  resolved "https://registry.yarnpkg.com/coveralls/-/coveralls-2.11.15.tgz#37d3474369d66c14f33fa73a9d25cee6e099fca0"
   dependencies:
     js-yaml "3.6.1"
     lcov-parse "0.0.10"
@@ -1217,8 +1217,8 @@ qs@~6.3.0:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.3.0.tgz#f403b264f23bc01228c74131b407f18d5ea5d442"
 
 queclink-parser:
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/queclink-parser/-/queclink-parser-0.3.7.tgz#e90044c7e9652ec194e0e4b0ec3e85461fd36685"
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/queclink-parser/-/queclink-parser-0.3.8.tgz#8ae6f9d5d4f1415fe34b9fad227f99d3d695851c"
   dependencies:
     lodash "^4.16.4"
     moment "^2.15.2"
