@@ -1,6 +1,6 @@
 {
   "name": "tracking-parser",
-  "version": "1.5.25",
+  "version": "1.5.26",
   "description": "Parse raw data from tracking devices",
   "main": "src",
   "scripts": {
