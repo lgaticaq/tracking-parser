@@ -40,7 +40,7 @@
     "bscoords": "^0.0.1",
     "cellocator-parser": "^2.2.6",
     "meitrack-parser": "^1.0.0",
-    "queclink-parser": "^0.3.8",
+    "queclink-parser": "^0.3.10",
     "simple-reverse-geocoder": "^1.2.2",
     "tz-parser": "^3.0.3"
   },
@@ -48,7 +48,7 @@
     "chai": "^3.5.0",
     "codeclimate-test-reporter": "^0.4.0",
     "coveralls": "^2.11.15",
-    "eslint": "^3.9.1",
+    "eslint": "^3.10.2",
     "generate-changelog": "^1.0.2",
     "istanbul": "^0.4.5",
     "mocha": "^3.1.2",
