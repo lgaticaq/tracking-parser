@@ -1,3 +1,10 @@
+#### 1.5.26 (2016-11-18)
+
+##### Chores
+
+* **travis:** Remove node 5 and add 7 ([ad962462](https://github.com/lgaticaq/tracking-parser/commit/ad9624623fe7643d23d4a6e7d8bb720456c3b4f1))
+* **package:** Update queclink-parser to 0.3.10 and eslint to 3.10.2 ([7209c044](https://github.com/lgaticaq/tracking-parser/commit/7209c044cef4d235d9e9342a2363076e0930b3ee))
+
 #### 1.5.25 (2016-11-11)
 
 ##### Chores
