@@ -1,3 +1,11 @@
+#### 1.5.28 (2016-11-28)
+
+##### Chores
+
+* **travis:** Add yarn ([785ed2f8](https://github.com/lgaticaq/tracking-parser/commit/785ed2f87a8b4d39d60f637f88ea167c5612b7ee))
+* **nvm:** Update node version ([ce44e914](https://github.com/lgaticaq/tracking-parser/commit/ce44e914a4f30321678e43503f2d921649d23969))
+* **package:** Update dependencies ([f2b2194c](https://github.com/lgaticaq/tracking-parser/commit/f2b2194c8e681928d9c9dc446fca6189a694f126))
+
 #### 1.5.27 (2016-11-25)
 
 ##### Chores
