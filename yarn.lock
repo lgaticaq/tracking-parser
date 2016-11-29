@@ -453,9 +453,9 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint@^3.11.0:
-  version "3.11.0"
-  resolved "https://registry.npmjs.org/eslint/-/eslint-3.11.0.tgz#41d34f8b3e69949beee5c097ff4e75ad13ba2d00"
+eslint@^3.11.1:
+  version "3.11.1"
+  resolved "https://registry.npmjs.org/eslint/-/eslint-3.11.1.tgz#408be581041385cba947cd8d1cd2227782b55dbf"
   dependencies:
     babel-code-frame "^6.16.0"
     chalk "^1.1.3"
@@ -1055,11 +1055,11 @@ module-not-found-error@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/module-not-found-error/-/module-not-found-error-1.0.1.tgz#cf8b4ff4f29640674d6cdd02b0e3bc523c2bbdc0"
 
-moment@^2.15.1, moment@^2.15.2:
+moment@^2.15.1:
   version "2.15.2"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.15.2.tgz#1bfdedf6a6e345f322fe956d5df5bd08a8ce84dc"
 
-moment@^2.17.0:
+moment@^2.15.2, moment@^2.17.0:
   version "2.17.0"
   resolved "https://registry.npmjs.org/moment/-/moment-2.17.0.tgz#a4c292e02aac5ddefb29a6eed24f51938dd3b74f"
 
@@ -1199,9 +1199,9 @@ qs@~6.2.0:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.2.1.tgz#ce03c5ff0935bc1d9d69a9f14cbd18e568d67625"
 
-queclink-parser@^0.3.11:
-  version "0.3.11"
-  resolved "https://registry.npmjs.org/queclink-parser/-/queclink-parser-0.3.11.tgz#a603bf92251c43bbd93574a32c0d57927dcd3438"
+queclink-parser@^0.3.12:
+  version "0.3.12"
+  resolved "https://registry.npmjs.org/queclink-parser/-/queclink-parser-0.3.12.tgz#f341839dff42b2d481ba49ca54e4c0fc8be1ce81"
   dependencies:
     lodash "^4.16.4"
     moment "^2.15.2"
