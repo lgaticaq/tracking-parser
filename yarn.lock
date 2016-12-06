@@ -1055,13 +1055,13 @@ module-not-found-error@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/module-not-found-error/-/module-not-found-error-1.0.1.tgz#cf8b4ff4f29640674d6cdd02b0e3bc523c2bbdc0"
 
-moment@^2.15.1:
+moment@^2.15.1, moment@^2.15.2:
   version "2.15.2"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.15.2.tgz#1bfdedf6a6e345f322fe956d5df5bd08a8ce84dc"
 
-moment@^2.15.2, moment@^2.17.0:
-  version "2.17.0"
-  resolved "https://registry.npmjs.org/moment/-/moment-2.17.0.tgz#a4c292e02aac5ddefb29a6eed24f51938dd3b74f"
+moment@^2.17.1:
+  version "2.17.1"
+  resolved "https://registry.npmjs.org/moment/-/moment-2.17.1.tgz#fed9506063f36b10f066c8b59a144d7faebe1d82"
 
 ms@0.7.1:
   version "0.7.1"
@@ -1511,12 +1511,12 @@ typedarray@~0.0.5:
   version "0.0.6"
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-tz-parser@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.npmjs.org/tz-parser/-/tz-parser-3.0.4.tgz#be31029a1b24e0347493b11aca238bb273387432"
+tz-parser@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.npmjs.org/tz-parser/-/tz-parser-3.0.5.tgz#aba872a16094204106fa9a5de2bfc56769460918"
   dependencies:
     crc "^3.4.3"
-    moment "^2.17.0"
+    moment "^2.17.1"
     node-nmea "^1.0.3"
 
 uglify-js@^2.6:
