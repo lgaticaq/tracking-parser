@@ -981,9 +981,13 @@ lodash.keys@^3.0.0:
     lodash.isarguments "^3.0.0"
     lodash.isarray "^3.0.0"
 
-lodash@^4.0.0, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.16.4, lodash@^4.3.0:
+lodash@^4.0.0, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.3.0:
   version "4.16.6"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.16.6.tgz#d22c9ac660288f3843e16ba7d2b5d06cca27d777"
+
+lodash@^4.17.2:
+  version "4.17.2"
+  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
 
 log-driver@1.2.5:
   version "1.2.5"
@@ -1055,7 +1059,7 @@ module-not-found-error@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/module-not-found-error/-/module-not-found-error-1.0.1.tgz#cf8b4ff4f29640674d6cdd02b0e3bc523c2bbdc0"
 
-moment@^2.15.1, moment@^2.15.2:
+moment@^2.15.1:
   version "2.15.2"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.15.2.tgz#1bfdedf6a6e345f322fe956d5df5bd08a8ce84dc"
 
@@ -1199,12 +1203,12 @@ qs@~6.2.0:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.2.1.tgz#ce03c5ff0935bc1d9d69a9f14cbd18e568d67625"
 
-queclink-parser@^0.3.12:
-  version "0.3.12"
-  resolved "https://registry.npmjs.org/queclink-parser/-/queclink-parser-0.3.12.tgz#f341839dff42b2d481ba49ca54e4c0fc8be1ce81"
+queclink-parser@^0.3.13:
+  version "0.3.13"
+  resolved "https://registry.npmjs.org/queclink-parser/-/queclink-parser-0.3.13.tgz#7c9661d8b8b494d6fe0837d918f44ba70ee7bb62"
   dependencies:
-    lodash "^4.16.4"
-    moment "^2.15.2"
+    lodash "^4.17.2"
+    moment "^2.17.1"
 
 readable-stream@~2.0.0, readable-stream@~2.0.5:
   version "2.0.6"
