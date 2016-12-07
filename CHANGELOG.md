@@ -1,3 +1,13 @@
+#### 1.5.31 (2016-12-7)
+
+##### Chores
+
+* **package:** Update queclink-parser to v0.3.13 ([387835f1](https://github.com/lgaticaq/tracking-parser/commit/387835f1c593298d6af29b03e78d69734e4a2334))
+
+##### Bug Fixes
+
+* **parse:** Add try/catch if fail any parser ([a0ef101c](https://github.com/lgaticaq/tracking-parser/commit/a0ef101c139b69ec879fc5c3f9126d71c3bf7713))
+
 #### 1.5.30 (2016-12-6)
 
 ##### Chores
