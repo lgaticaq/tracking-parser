@@ -66,13 +66,17 @@ const enableLoc = (data, options) => {
 };
 
 const parse = (raw, options) => {
-  options = options || {};
-  const fns = [tz.parse, meitrack.parse, cellocator.parse, queclink.parse];
-  const data = fns.map(x => x(raw)).find(x => x.type !== 'UNKNOWN') || {raw: raw.toString(), type: 'UNKNOWN'};
-  if (Object.prototype.toString.call(data) === '[object Array]') {
-    return Promise.all(data.map(x => enableLoc(x, options)));
-  } else {
-    return enableLoc(data, options);
+  try {
+    options = options || {};
+    const fns = [tz.parse, meitrack.parse, cellocator.parse, queclink.parse];
+    const data = fns.map(x => x(raw)).find(x => x.type !== 'UNKNOWN') || {raw: raw.toString(), type: 'UNKNOWN'};
+    if (Object.prototype.toString.call(data) === '[object Array]') {
+      return Promise.all(data.map(x => enableLoc(x, options)));
+    } else {
+      return enableLoc(data, options);
+    }
+  } catch(err) {
+    return Promise.reject(err);
   }
 };
 

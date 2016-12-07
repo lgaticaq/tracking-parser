@@ -426,4 +426,15 @@ describe('tracking-parser', () => {
     const ack = tracking.getCellocatorAck(unitId, commandNumerator, messageNumerator);
     expect(ack).to.eql(new Buffer('4D43475004AAC30C00010000000000500000000000000000000000CE', 'hex'));
   });
+
+  it('should return an error if fail any parser', done => {
+    const raw = new Buffer('+RESP:GTFRI,060100,135790246811220,,,00,1,1,4.3,92,70.0,121.354335,31.222073,20090214013254,0460,0000,18d8,6141,00,2000.0,12345:12:34,,,$');
+    tracking.parse(raw).then(data => {
+      expect(data.raw).to.eql(raw.toString());
+      done();
+    }).catch(err => {
+      expect(err).to.be.an('error');
+      done();
+    });
+  });
 });
