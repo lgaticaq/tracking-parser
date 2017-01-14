@@ -1,3 +1,13 @@
+#### 1.5.33 (2017-1-14)
+
+##### Chores
+
+* **travis:** Add cache yarn ([30d790cc](https://github.com/lgaticaq/tracking-parser/commit/30d790cc9f08354f491816ce1c6437f84dec9add))
+* **package:**
+  * Upgrade min node version to v6 ([5816fd7a](https://github.com/lgaticaq/tracking-parser/commit/5816fd7acfa4c3869fb8e0c440001e965cf6aca7))
+  * Upgrade queclink-parser to v0.3.15 ([a471c896](https://github.com/lgaticaq/tracking-parser/commit/a471c896ad03486402ffaf359d2f6b0b73b81a4e))
+  * update eslint to version 3.13.0 ([5509a2bc](https://github.com/lgaticaq/tracking-parser/commit/5509a2bc122b140aad61ea5efd1b4b43186b64ea))
+
 #### 1.5.32 (2017-1-4)
 
 ##### Chores
