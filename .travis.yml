@@ -18,7 +18,4 @@ after_success:
   - npm run codeclimate
 services:
   - redis-server
-before_install:
-  - npm i -g yarn
-install:
-  - yarn install
+cache: yarn
