@@ -453,9 +453,9 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint@^3.14.0:
-  version "3.14.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.14.0.tgz#2c617e5f782fda5cbee5bc8be7ef5053af8e63a3"
+eslint@^3.14.1:
+  version "3.14.1"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.14.1.tgz#8a62175f2255109494747a1b25128d97b8eb3d97"
   dependencies:
     babel-code-frame "^6.16.0"
     chalk "^1.1.3"
@@ -1199,9 +1199,9 @@ qs@~6.2.0:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.2.1.tgz#ce03c5ff0935bc1d9d69a9f14cbd18e568d67625"
 
-queclink-parser@^0.3.16:
-  version "0.3.16"
-  resolved "https://registry.yarnpkg.com/queclink-parser/-/queclink-parser-0.3.16.tgz#12ddd14af21cbec65516714268e4eab83221ad7f"
+queclink-parser@^0.3.17:
+  version "0.3.17"
+  resolved "https://registry.yarnpkg.com/queclink-parser/-/queclink-parser-0.3.17.tgz#cef342322005f04fa6106eed94ef7b94fc17b323"
   dependencies:
     lodash "^4.17.4"
     moment "^2.17.1"
