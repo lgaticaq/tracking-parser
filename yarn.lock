@@ -141,9 +141,9 @@ bl@~1.1.2:
   dependencies:
     readable-stream "~2.0.5"
 
-bluebird, bluebird@^3.0.6, bluebird@^3.4.1, bluebird@^3.4.6:
-  version "3.4.6"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.6.tgz#01da8d821d87813d158967e743d5fe6c62cf8c0f"
+bluebird@^3.0.6, bluebird@^3.4.1, bluebird@^3.4.6, bluebird@^3.4.7:
+  version "3.4.7"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.7.tgz#f72d760be09b7f76d08ed8fae98b289a8d05fab3"
 
 boom@2.x.x:
   version "2.10.1"
@@ -1183,9 +1183,9 @@ progress@^1.1.8:
   version "1.1.8"
   resolved "https://registry.npmjs.org/progress/-/progress-1.1.8.tgz#e260c78f6161cdd9b0e56cc3e0a85de17c7a57be"
 
-proxyquire:
-  version "1.7.10"
-  resolved "https://registry.yarnpkg.com/proxyquire/-/proxyquire-1.7.10.tgz#75be0770a81188f4d08bd01dfc30b767365aa20d"
+proxyquire@^1.7.11:
+  version "1.7.11"
+  resolved "https://registry.yarnpkg.com/proxyquire/-/proxyquire-1.7.11.tgz#13b494eb1e71fb21cc3ebe3699e637d3bec1af9e"
   dependencies:
     fill-keys "^1.0.2"
     module-not-found-error "^1.0.0"
@@ -1199,9 +1199,9 @@ qs@~6.2.0:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.2.1.tgz#ce03c5ff0935bc1d9d69a9f14cbd18e568d67625"
 
-queclink-parser@^0.3.17:
-  version "0.3.17"
-  resolved "https://registry.yarnpkg.com/queclink-parser/-/queclink-parser-0.3.17.tgz#cef342322005f04fa6106eed94ef7b94fc17b323"
+queclink-parser@^0.3.18:
+  version "0.3.18"
+  resolved "https://registry.yarnpkg.com/queclink-parser/-/queclink-parser-0.3.18.tgz#d37301ed969e4986c983f96533325e16eb1fe2e3"
   dependencies:
     lodash "^4.17.4"
     moment "^2.17.1"
