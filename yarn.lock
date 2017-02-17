@@ -324,6 +324,10 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
+date-fns@^1.27.2:
+  version "1.27.2"
+  resolved "https://registry.npmjs.org/date-fns/-/date-fns-1.27.2.tgz#ce82f420bc028356cc661fc55c0494a56a990c9c"
+
 debug@2.2.0, debug@^2.1.1:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
@@ -1514,12 +1518,12 @@ typedarray@~0.0.5:
   version "0.0.6"
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-tz-parser@^3.0.6:
-  version "3.0.6"
-  resolved "https://registry.npmjs.org/tz-parser/-/tz-parser-3.0.6.tgz#a62a4058fe40ef77571d1f8d41c1dbdff1cdba25"
+tz-parser@^3.0.7:
+  version "3.0.7"
+  resolved "https://registry.npmjs.org/tz-parser/-/tz-parser-3.0.7.tgz#cebc44737dd484610c98b1a75a6121f646a5246c"
   dependencies:
     crc "^3.4.4"
-    moment "^2.17.1"
+    date-fns "^1.27.2"
     node-nmea "^1.0.3"
 
 uglify-js@^2.6:
