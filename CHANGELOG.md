@@ -1,3 +1,19 @@
+#### 1.5.39 (2017-2-17)
+
+##### Chores
+
+* **package:**
+  * Upgrade queclink-parser to v0.3.23 ([6a316853](https://github.com/lgaticaq/tracking-parser/commit/6a316853b25721845d7373868abfb458ae1524bc))
+  * Upgrade cellocator-parser to v2.2.8 ([a782eec0](https://github.com/lgaticaq/tracking-parser/commit/a782eec04617bff6f7be94ebf59587a5b22ccd7d))
+  * Upgrade tz-parser to v3.0.7 ([244e0f84](https://github.com/lgaticaq/tracking-parser/commit/244e0f84ca725b45e162ff9bd99ee01b2cc8e69f))
+  * Upgrade codeclimate-test-reporter to v0.4.1 ([6d20bfff](https://github.com/lgaticaq/tracking-parser/commit/6d20bfffa330c70ecf0c8c3f4cf55cc4c4073f1c))
+  * Upgrade coveralls to v2.11.16 ([fd0b06aa](https://github.com/lgaticaq/tracking-parser/commit/fd0b06aadb8568d1a563775518ac408bc2ed9604))
+  * Upgrade eslint to v3.15.0 ([35da7dc7](https://github.com/lgaticaq/tracking-parser/commit/35da7dc7358d46ea7a07a5d56860abdd34f0fd01))
+
+##### Documentation Changes
+
+* **LICENSE:** Update year ([7c6c9337](https://github.com/lgaticaq/tracking-parser/commit/7c6c9337d874f6ce4a84c1b0263089f79714d768))
+
 #### 1.5.38 (2017-2-2)
 
 ##### Chores
