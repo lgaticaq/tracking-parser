@@ -38,7 +38,7 @@
   "dependencies": {
     "bluebird": "^3.4.7",
     "bscoords": "^0.0.1",
-    "cellocator-parser": "^2.2.6",
+    "cellocator-parser": "^2.2.8",
     "meitrack-parser": "^1.0.0",
     "queclink-parser": "^0.3.20",
     "simple-reverse-geocoder": "^1.2.2",
