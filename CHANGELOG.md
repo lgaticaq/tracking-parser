@@ -1,3 +1,11 @@
+#### 1.5.41 (2017-2-20)
+
+##### Chores
+
+* **package:**
+  * Upgrade tz-parser to v3.1.0 ([489b8051](https://github.com/lgaticaq/tracking-parser/commit/489b8051fd6d8720c58c8ffa44f47e7023128574))
+  * Upgrade eslint to v3.16.0 ([3bcb9d6b](https://github.com/lgaticaq/tracking-parser/commit/3bcb9d6b205481da0d507a16f76a8ae074efcf9c))
+
 #### 1.5.40 (2017-2-20)
 
 ##### Chores
