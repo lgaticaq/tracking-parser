@@ -1518,9 +1518,9 @@ typedarray@~0.0.5:
   version "0.0.6"
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-tz-parser@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/tz-parser/-/tz-parser-3.1.0.tgz#898db618293207b7f436ecf3e54a448ffc06c065"
+tz-parser@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/tz-parser/-/tz-parser-3.1.1.tgz#d81630274bce7726738306381af5c7e66edee50a"
   dependencies:
     crc "^3.4.4"
     date-fns "^1.27.2"

@@ -42,7 +42,7 @@
     "meitrack-parser": "^1.0.0",
     "queclink-parser": "^0.3.25",
     "simple-reverse-geocoder": "^1.2.2",
-    "tz-parser": "^3.1.0"
+    "tz-parser": "^3.1.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
