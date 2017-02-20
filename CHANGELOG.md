@@ -1,3 +1,9 @@
+#### 1.5.42 (2017-2-20)
+
+##### Chores
+
+* **package:** Upgrade tz-parser to v3.1.1 ([80fd46b2](https://github.com/lgaticaq/tracking-parser/commit/80fd46b2c6868b8a00404764f7ea2e66360d35bc))
+
 #### 1.5.41 (2017-2-20)
 
 ##### Chores
