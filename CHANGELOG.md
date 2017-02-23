@@ -1,3 +1,11 @@
+#### 1.5.44 (2017-2-23)
+
+##### Chores
+
+* **queclink-parser:**
+  * Upgrade eslint to v3.16.1 ([698b03ed](https://github.com/lgaticaq/tracking-parser/commit/698b03ed8b2f890e020ca9fdcc5e4e448805a2bf))
+  * Upgrade queclink-parser to v0.3.27 ([595d3d78](https://github.com/lgaticaq/tracking-parser/commit/595d3d7899857ea971eb086f3fdb472a7b0e3625))
+
 #### 1.5.43 (2017-2-22)
 
 ##### Chores
