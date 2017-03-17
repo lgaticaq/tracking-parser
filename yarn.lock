@@ -141,11 +141,7 @@ bl@~1.1.2:
   dependencies:
     readable-stream "~2.0.5"
 
-bluebird@^3.0.6, bluebird@^3.4.1, bluebird@^3.4.6:
-  version "3.4.7"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.7.tgz#f72d760be09b7f76d08ed8fae98b289a8d05fab3"
-
-bluebird@^3.5.0:
+bluebird@^3.0.6, bluebird@^3.4.1, bluebird@^3.4.6, bluebird@^3.5.0:
   version "3.5.0"
   resolved "https://registry.npmjs.org/bluebird/-/bluebird-3.5.0.tgz#791420d7f551eea2897453a8a77653f96606d67c"
 
@@ -1211,9 +1207,9 @@ qs@~6.3.0:
   version "6.3.1"
   resolved "https://registry.npmjs.org/qs/-/qs-6.3.1.tgz#918c0b3bcd36679772baf135b1acb4c1651ed79d"
 
-queclink-parser@^0.3.28:
-  version "0.3.28"
-  resolved "https://registry.yarnpkg.com/queclink-parser/-/queclink-parser-0.3.28.tgz#4a2b7a1d38a8d597f9b3de11c253d43a77434793"
+queclink-parser@^0.3.29:
+  version "0.3.29"
+  resolved "https://registry.npmjs.org/queclink-parser/-/queclink-parser-0.3.29.tgz#a132c372ef43703635337bfef47fe2afb9c818f6"
   dependencies:
     lodash "^4.17.4"
     moment "^2.17.1"
