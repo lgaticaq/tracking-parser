@@ -1,3 +1,13 @@
+#### 1.5.46 (2017-3-17)
+
+##### Chores
+
+* **package:**
+  * Upgrade eslint to v3.17.1 ([061d4c60](https://github.com/lgaticaq/tracking-parser/commit/061d4c60d59fc4661daae601cc0d1776c12e9ffd))
+  * Upgrade coveralls to v2.12.0 ([72bf6e25](https://github.com/lgaticaq/tracking-parser/commit/72bf6e25a4f83250593e5bf567368c4bce3e9f5c))
+  * Upgrade queclink-parser to v0.3.29 ([2ea3309f](https://github.com/lgaticaq/tracking-parser/commit/2ea3309f20efeab89e0288c01bbacba6d6972ca7))
+  * Upgrade bluebird to v3.5.0 ([1c1db833](https://github.com/lgaticaq/tracking-parser/commit/1c1db83342359e8f617f06eb590b6200c624e8df))
+
 #### 1.5.45 (2017-3-3)
 
 ##### Chores
