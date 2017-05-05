@@ -1,3 +1,9 @@
+#### 1.5.48 (2017-5-5)
+
+##### Chores
+
+* **package:** Upgrade queclink-parser to version 0.3.31 ([fbb65d39](https://github.com/lgaticaq/tracking-parser/commit/fbb65d39e9241b13de81506ceb4222ebb2d403b0))
+
 #### 1.5.47 (2017-4-18)
 
 ##### Chores
