@@ -1,3 +1,12 @@
+#### 1.5.50 (2017-06-30)
+
+##### Chores
+
+* **package:**
+  * update queclink-parser to v0.3.33 ([59b6d3af](https://github.com/lgaticaq/tracking-parser/commit/59b6d3af0a6cbe6a7662e5cf9834233c9d9a22f9))
+  * update eslint to version 4.0.0 ([c80abdfc](https://github.com/lgaticaq/tracking-parser/commit/c80abdfc76ca1d3f5e898eead01fd37cc3acb0a9))
+  * update chai to version 4.0.0 ([b07dcbac](https://github.com/lgaticaq/tracking-parser/commit/b07dcbac71081f4fb46be7caa2c59f10b36c1e20))
+
 #### 1.5.49 (2017-5-5)
 
 ##### Chores
