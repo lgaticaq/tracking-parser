@@ -1,5 +1,10 @@
+.git
 node_modules
-test
 coverage
-LICENSE
-.*
+test
+.editorconfig
+.eslintignore
+.gitignore
+.nvmrc
+.travis.yml
+CHANGELOG.md

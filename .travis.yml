@@ -10,12 +10,12 @@ addons:
     - g++-4.8
 node_js:
   - '6'
-  - '7'
+  - '8'
 notifications:
   email: false
 after_success:
-  - npm run coveralls
-  - npm run codeclimate
+  - npm i -g coveralls codeclimate-test-reporter
+  - coveralls < coverage/lcov.info
+  - codeclimate-test-reporter < coverage/lcov.info
 services:
   - redis-server
-cache: yarn
