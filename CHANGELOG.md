@@ -1,3 +1,9 @@
+### 2.1.0 (2017-11-24)
+
+##### New Features
+
+* **parser:** add simpleParse (sync) for return a basic data ([8ff25573](https://github.com/lgaticaq/tracking-parser/commit/8ff255730edff581044345b5794ef710f347d257))
+
 #### 2.0.1 (2017-11-24)
 
 ##### Documentation Changes
