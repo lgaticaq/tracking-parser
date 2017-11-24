@@ -44,7 +44,7 @@
     "cellocator-parser": "^2.2.9",
     "meitrack-parser": "^2.0.0",
     "queclink-parser": "^0.3.34",
-    "simple-reverse-geocoder": "^1.2.2",
+    "simple-reverse-geocoder": "^2.0.0",
     "tz-parser": "^3.1.2"
   },
   "devDependencies": {
