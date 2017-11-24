@@ -1,19 +1,26 @@
 'use strict'
 
-const bscoords = require('bscoords')
+const mobileLocator = require('mobile-locator')
 const meitrack = require('meitrack-parser')
 const cellocator = require('cellocator-parser')
 const queclink = require('queclink-parser')
-const Promise = require('bluebird')
 const rg = require('simple-reverse-geocoder')
 const tz = require('tz-parser')
 
-Promise.promisify(bscoords.requestGoogle)
-
-const setCache = instance => {
-  rg.setCache(instance)
+/**
+ * Set client Redis for cache results
+ * @param  {String} uri Redis connection string. Ex redis://user:pass@host:port/db
+ * @return {Void}
+ */
+const setCache = uri => {
+  rg.setCache(uri)
 }
 
+/**
+ * Get imei from raw data
+ * @param  {Buffer} raw Raw data from tracking device
+ * @return {String}     Imei
+ */
 const getImei = raw => {
   const fns = [
     tz.getImei,
@@ -25,77 +32,97 @@ const getImei = raw => {
   return imei
 }
 
-const getLoc = (mcc, mnc, lac, cid) => {
-  return new Promise((resolve, reject) => {
-    bscoords
-      .requestGoogleAsync(mcc, mnc, lac, cid)
-      .then(coords => {
-        resolve({
-          type: 'Point',
-          coordinates: [coords.lon, coords.lat]
-        })
-      })
-      .catch(reject)
+/**
+ * Set geolocation from cell tower information
+ * @param  {Object} data           Parsed data
+ * @param  {Number} options.mcc    Mobile country code
+ * @param  {Number} options.mnc    Mobile network code
+ * @param  {String} options.apiKey Google api key
+ * @return {Object}                Parsed data with geolocation
+ */
+const setLoc = (data, { mcc = 730, mnc = 1, apiKey = null } = {}) => {
+  const locate = mobileLocator('google', { apiKey })
+  return locate({ mcc, mnc, lac: data.lac, cid: data.cid })
+    .then(coords => {
+      data.loc = {
+        type: 'Point',
+        coordinates: [coords.longitude, coords.latitude]
+      }
+      data.gps = 'triangulation'
+      return data
+    })
+    .catch(() => data)
+}
+
+/**
+ * Set address
+ * @param  {Object} data   Parsed data
+ * @param  {String} apiKey Google api key
+ * @return {Object}        Parsed data with address
+ */
+const setAddress = (data, apiKey = null) => {
+  if (!data.loc) return Promise.resolve(data)
+  return rg
+    .getAddress(data.loc, apiKey)
+    .then(address => {
+      data.address = address
+      return data
+    })
+    .catch(() => {
+      return data
+    })
+}
+
+/**
+ * Set gps (enable, triangulation, disable) and set address
+ * @param  {Object} data           Parsed data
+ * @param  {Number} options.mcc    Mobile country code
+ * @param  {Number} options.mnc    Mobile network code
+ * @param  {String} options.apiKey Google api key
+ * @return {Object}                Parsed data with geolocation and address
+ */
+const setGps = (data, { mcc = 730, mnc = 1, apiKey = null } = {}) => {
+  if (data.type !== 'data') return Promise.resolve(data)
+  data.gps = data.loc ? 'enable' : 'disable'
+  if (data.gps === 'enable') {
+    return setAddress(data, apiKey)
+  }
+  return setLoc(data, { mcc, mnc, apiKey }).then(data => {
+    return setAddress(data, apiKey)
   })
 }
 
-const addLoc = (data, options) => {
-  return new Promise(resolve => {
-    data.gps = data.loc ? 'enable' : 'disable'
-    if (data.gps === 'enable') return resolve(data)
-    const mcc = options.mcc || 730
-    const mnc = options.mnc || 1
-    getLoc(mcc, mnc, data.lac, data.cid)
-      .then(loc => {
-        data.loc = loc
-        data.gps = 'triangulation'
-        resolve(data)
-      })
-      .catch(() => resolve(data))
-  })
-}
-
-const addAddress = data => {
-  return new Promise(resolve => {
-    if (!data.loc) return resolve(data)
-    rg
-      .getAddress(data.loc)
-      .then(address => {
-        data.address = address
-        resolve(data)
-      })
-      .catch(() => {
-        resolve(data)
-      })
-  })
-}
-
-const enableLoc = (data, options) => {
-  return new Promise((resolve, reject) => {
-    if (data.type !== 'data') return resolve(data)
-    data.gps = data.loc ? 'enable' : 'disable'
-    addLoc(data, options).then(addAddress).then(resolve).catch(reject)
-  })
-}
-
-const parse = (raw, options) => {
+/**
+ * Parse raw data, set, geolocation, gps (enable, triangulation, disable) and address
+ * @param  {Buffer}               raw            Parsed data
+ * @param  {Number}               options.mcc    Mobile country code
+ * @param  {Number}               options.mnc    Mobile network code
+ * @param  {String}               options.apiKey Google api key
+ * @return {Object|Array<Object>}                Parsed data with geolocation, gps and address
+ */
+const parse = (raw, { mcc = 730, mnc = 1, apiKey = null } = {}) => {
   try {
-    options = options || {}
+    const options = { mcc, mnc, apiKey }
     const fns = [tz.parse, meitrack.parse, cellocator.parse, queclink.parse]
     const data = fns.map(x => x(raw)).find(x => x.type !== 'UNKNOWN') || {
       raw: raw.toString(),
       type: 'UNKNOWN'
     }
-    if (Object.prototype.toString.call(data) === '[object Array]') {
-      return Promise.all(data.map(x => enableLoc(x, options)))
+    if (Array.isArray(data)) {
+      return Promise.all(data.map(x => setGps(x, options)))
     } else {
-      return enableLoc(data, options)
+      return setGps(data, options)
     }
   } catch (err) {
     return Promise.reject(err)
   }
 }
 
+/**
+ * Parse command to raw command
+ * @param  {Object} data Command data
+ * @return {String}      Raw command
+ */
 const parseCommand = data => {
   let command = null
   const fns = {
@@ -110,6 +137,11 @@ const parseCommand = data => {
   return command
 }
 
+/**
+ * Get raw roboot command
+ * @param  {Object} data Command data
+ * @return {String}      Raw command
+ */
 const getRebootCommand = data => {
   let command = null
   if (data.device === 'tz') {

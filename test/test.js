@@ -1,26 +1,18 @@
 'use strict'
 
-const expect = require('chai').expect
+const { describe, it } = require('mocha')
+const { expect } = require('chai')
 const proxyquire = require('proxyquire')
 
-const bscoordsStub = {
-  requestGoogle: (mcc, mnc, lac, cid, cb) => {
-    if (mcc === 1) {
-      cb(new Error('Not found'))
-    } else if (mcc === 2) {
-      cb(null, { lat: -35.362024, lon: -71.51566 })
-    } else {
-      cb(null, { lat: -33.362024, lon: -70.51566 })
-    }
-  },
-  requestGoogleAsync: mcc => {
+const mobileLocatorStub = (provider, options) => {
+  return options => {
     return new Promise((resolve, reject) => {
-      if (mcc === 1) {
+      if (options.mcc === 1) {
         reject(new Error('Not found'))
-      } else if (mcc === 2) {
-        resolve({ lat: -35.362024, lon: -71.51566 })
+      } else if (options.mcc === 2) {
+        resolve({ latitude: -35.362024, longitude: -71.51566 })
       } else {
-        resolve({ lat: -33.362024, lon: -70.51566 })
+        resolve({ latitude: -33.362024, longitude: -70.51566 })
       }
     })
   }
@@ -37,7 +29,7 @@ const rgStub = {
   }
 }
 proxyquire('../src/index.js', {
-  bscoords: bscoordsStub,
+  'mobile-locator': mobileLocatorStub,
   'simple-reverse-geocoder': rgStub
 })
 
