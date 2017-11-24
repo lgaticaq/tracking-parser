@@ -34,14 +34,14 @@ const getImei = raw => {
 
 /**
  * Set geolocation from cell tower information
- * @param  {Object} data           Parsed data
- * @param  {Number} options.mcc    Mobile country code
- * @param  {Number} options.mnc    Mobile network code
- * @param  {String} options.apiKey Google api key
- * @return {Object}                Parsed data with geolocation
+ * @param  {Object} data        Parsed data
+ * @param  {Number} options.mcc Mobile country code
+ * @param  {Number} options.mnc Mobile network code
+ * @param  {String} options.key Google api key
+ * @return {Object}             Parsed data with geolocation
  */
-const setLoc = (data, { mcc = 730, mnc = 1, apiKey = null } = {}) => {
-  const locate = mobileLocator('google', { apiKey })
+const setLoc = (data, { mcc = 730, mnc = 1, key = null } = {}) => {
+  const locate = mobileLocator('google', { key })
   return locate({ mcc, mnc, lac: data.lac, cid: data.cid })
     .then(coords => {
       data.loc = {
@@ -87,7 +87,11 @@ const setGps = (data, { mcc = 730, mnc = 1, apiKey = null } = {}) => {
   if (data.gps === 'enable') {
     return setAddress(data, apiKey)
   }
-  return setLoc(data, { mcc, mnc, apiKey }).then(data => {
+  return setLoc(data, {
+    mcc: data.mcc || mcc,
+    mnc: data.mnc || mnc,
+    key: apiKey
+  }).then(data => {
     return setAddress(data, apiKey)
   })
 }
