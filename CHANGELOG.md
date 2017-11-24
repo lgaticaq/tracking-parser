@@ -1,3 +1,56 @@
+## 2.0.0 (2017-11-24)
+
+##### Chores
+
+* **deps:**
+  * update dependency generate-changelog to v1.6.0 ([233f2bc6](https://github.com/lgaticaq/tracking-parser/commit/233f2bc69aee9999fd01d9d7457e96c714df7820))
+  * update dependency lint-staged to v5.0.0 ([c4e34bb3](https://github.com/lgaticaq/tracking-parser/commit/c4e34bb31dabcdce5a11528f3348f4c717662627))
+  * update dependency eslint to v4.11.0 ([c6cf51f0](https://github.com/lgaticaq/tracking-parser/commit/c6cf51f0a99c9289c7d8ebae0644861554a9ce15))
+  * update dependency eslint to v4.10.0 ([061dd19c](https://github.com/lgaticaq/tracking-parser/commit/061dd19c94d37f0146f5f621bb9c7d1101a7a138))
+  * update dependency eslint-plugin-node to v5.2.1 ([2abb253f](https://github.com/lgaticaq/tracking-parser/commit/2abb253f90138946fef95c294dce60d31440f92b))
+  * update dependency eslint-plugin-import to v2.8.0 ([6c98399b](https://github.com/lgaticaq/tracking-parser/commit/6c98399b3aa64e2a7b1d36c5b142f97c60ee1096))
+  * update dependency lint-staged to v4.3.0 ([0f6fa1cb](https://github.com/lgaticaq/tracking-parser/commit/0f6fa1cbce83ca03c3475879c1c0568e3fb8108b))
+  * update dependency prettier-standard to v7.0.3 ([cc107163](https://github.com/lgaticaq/tracking-parser/commit/cc107163dbc39e709a91bafc15eee5c6af827b3e))
+  * update dependency eslint to v4.9.0 ([478edcce](https://github.com/lgaticaq/tracking-parser/commit/478edcceefe27ab35e1f5bd2f0b586138fc2e0ba))
+  * update dependency eslint-plugin-promise to v3.6.0 ([11a13818](https://github.com/lgaticaq/tracking-parser/commit/11a13818aa4ec91a696873a0e5245887db7a5f05))
+  * update dependency mocha to v4.0.1 ([086f9f15](https://github.com/lgaticaq/tracking-parser/commit/086f9f15205f91117c264de78ccc613c53a1d010))
+  * update dependency mocha to v4.0.0 ([2b78928b](https://github.com/lgaticaq/tracking-parser/commit/2b78928ba311912f6302dc435895f7082a5dd4bb))
+  * update dependency eslint to v4.8.0 ([773dcaf5](https://github.com/lgaticaq/tracking-parser/commit/773dcaf5a593d5629841db17be6bea61fe35b756))
+  * update dependency eslint-plugin-node to v5.2.0 ([527821d4](https://github.com/lgaticaq/tracking-parser/commit/527821d41a09e4c2b935bc9811b986e81ee89802))
+  * update dependency prettier-standard to v7.0.1 ([251a0ea2](https://github.com/lgaticaq/tracking-parser/commit/251a0ea28914cec1ca5a275c0894604400d66957))
+  * update dependency lint-staged to v4.2.3 ([5499a97b](https://github.com/lgaticaq/tracking-parser/commit/5499a97b6abf5d922eac81f3fdf7d5acfef6b49a))
+  * update dependency generate-changelog to v1.5.0 ([48b6bcf9](https://github.com/lgaticaq/tracking-parser/commit/48b6bcf9dc44028f8e8b5a33f13c10139938d6e8))
+  * update dependency eslint to v4.7.2 ([a1a03621](https://github.com/lgaticaq/tracking-parser/commit/a1a0362183bf119806cf354dc26d6d00ff75b031))
+  * update dependency eslint to v4.7.1 ([891ae390](https://github.com/lgaticaq/tracking-parser/commit/891ae3904d34728844253528ebdf320b809088cc))
+  * update dependency lint-staged to v4.2.1 ([78201e81](https://github.com/lgaticaq/tracking-parser/commit/78201e813a83a9ebc40e9853857e4c3fff81eae2))
+  * update dependency eslint to v4.7.0 ([dfde5a9d](https://github.com/lgaticaq/tracking-parser/commit/dfde5a9db20db1d246eae9e115ca9af721c7cade))
+  * update dependency mocha to v3.5.3 ([5c13f86a](https://github.com/lgaticaq/tracking-parser/commit/5c13f86a5a59908b0695c712ee671b93ca918f59))
+  * update dependency mocha to v3.5.2 ([864cb250](https://github.com/lgaticaq/tracking-parser/commit/864cb250c1e75b6cb7a2a0bba6407fad92d0db4e))
+  * update dependency mocha to v3.5.1 ([50e32951](https://github.com/lgaticaq/tracking-parser/commit/50e32951f7ff9944eefa544111be5c2ca61a1e96))
+  * update dependency lint-staged to v4.1.3 ([7d249615](https://github.com/lgaticaq/tracking-parser/commit/7d249615e453ecee69e1c1d8bf71633230e51632))
+  * update dependency lint-staged to v4.1.2 ([5d7ede12](https://github.com/lgaticaq/tracking-parser/commit/5d7ede1208d217c7ee727e95185bd9d2448be95c))
+* **package:** update lint-staged to version 4.2.0 ([317b39b1](https://github.com/lgaticaq/tracking-parser/commit/317b39b1501b1f2c043ca9398e917828c0283296))
+
+##### Continuous Integration
+
+* **node:** update node versions ([f8fcdad4](https://github.com/lgaticaq/tracking-parser/commit/f8fcdad4d13277a939e383f92c4f1038df8c64b8))
+
+##### Documentation Changes
+
+* **badges:** update codeclimate badge ([317068f3](https://github.com/lgaticaq/tracking-parser/commit/317068f3530690e98a91bca9c45dbd165b541213))
+
+##### New Features
+
+* **package:** update dependencies ([fded3ebc](https://github.com/lgaticaq/tracking-parser/commit/fded3ebc5fc0d2164091c5ae188cd01f8e114703))
+
+##### Bug Fixes
+
+* **deps:** update dependency meitrack-parser to v^2.0.0 ([5c1cc477](https://github.com/lgaticaq/tracking-parser/commit/5c1cc477caf0172b00a03138ccaa0563bba9b7a3))
+
+##### Refactors
+
+* **deps:** renovate pin dependencies packages ([0bc5fa7b](https://github.com/lgaticaq/tracking-parser/commit/0bc5fa7b3a52348a083aca2362c632d4c286d583))
+
 #### 1.5.51 (2017-08-23)
 
 ##### Chores
