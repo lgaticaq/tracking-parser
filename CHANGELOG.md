@@ -1,3 +1,13 @@
+#### 2.0.1 (2017-11-24)
+
+##### Documentation Changes
+
+* **README:** update doc ([d4aa6d38](https://github.com/lgaticaq/tracking-parser/commit/d4aa6d3836e63bd2abb2df48bc95421dc35892d4))
+
+##### Bug Fixes
+
+* **parser:** fix set google api key ([6fd47dc2](https://github.com/lgaticaq/tracking-parser/commit/6fd47dc2c00fc3fc255924239cc59821f2982188))
+
 ## 2.0.0 (2017-11-24)
 
 ##### Chores
