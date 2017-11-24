@@ -34,11 +34,11 @@ const getImei = raw => {
 
 /**
  * Set geolocation from cell tower information
- * @param  {Object} data        Parsed data
- * @param  {Number} options.mcc Mobile country code
- * @param  {Number} options.mnc Mobile network code
- * @param  {String} options.key Google api key
- * @return {Object}             Parsed data with geolocation
+ * @param  {Object}          data        Parsed data
+ * @param  {Number}          options.mcc Mobile country code
+ * @param  {Number}          options.mnc Mobile network code
+ * @param  {String}          options.key Google api key
+ * @return {Promise<Object>}             Parsed data with geolocation
  */
 const setLoc = (data, { mcc = 730, mnc = 1, key = null } = {}) => {
   const locate = mobileLocator('google', { key })
@@ -56,9 +56,9 @@ const setLoc = (data, { mcc = 730, mnc = 1, key = null } = {}) => {
 
 /**
  * Set address
- * @param  {Object} data   Parsed data
- * @param  {String} apiKey Google api key
- * @return {Object}        Parsed data with address
+ * @param  {Object}         data   Parsed data
+ * @param  {String}         apiKey Google api key
+ * @return {Promise<Object>}        Parsed data with address
  */
 const setAddress = (data, apiKey = null) => {
   if (!data.loc) return Promise.resolve(data)
@@ -75,11 +75,11 @@ const setAddress = (data, apiKey = null) => {
 
 /**
  * Set gps (enable, triangulation, disable) and set address
- * @param  {Object} data           Parsed data
- * @param  {Number} options.mcc    Mobile country code
- * @param  {Number} options.mnc    Mobile network code
- * @param  {String} options.apiKey Google api key
- * @return {Object}                Parsed data with geolocation and address
+ * @param  {Object}          data           Parsed data
+ * @param  {Number}          options.mcc    Mobile country code
+ * @param  {Number}          options.mnc    Mobile network code
+ * @param  {String}          options.apiKey Google api key
+ * @return {Promise<Object>}                Parsed data with geolocation and address
  */
 const setGps = (data, { mcc = 730, mnc = 1, apiKey = null } = {}) => {
   if (data.type !== 'data') return Promise.resolve(data)
@@ -97,12 +97,26 @@ const setGps = (data, { mcc = 730, mnc = 1, apiKey = null } = {}) => {
 }
 
 /**
+ * Parse raw data
+ * @param  {Buffer}               raw Raw data
+ * @return {Object|Array<Object>}     Parsed data
+ */
+const simpleParse = raw => {
+  const fns = [tz.parse, meitrack.parse, cellocator.parse, queclink.parse]
+  const data = fns.map(x => x(raw)).find(x => x.type !== 'UNKNOWN') || {
+    raw: raw.toString(),
+    type: 'UNKNOWN'
+  }
+  return data
+}
+
+/**
  * Parse raw data, set, geolocation, gps (enable, triangulation, disable) and address
- * @param  {Buffer}               raw            Parsed data
- * @param  {Number}               options.mcc    Mobile country code
- * @param  {Number}               options.mnc    Mobile network code
- * @param  {String}               options.apiKey Google api key
- * @return {Object|Array<Object>}                Parsed data with geolocation, gps and address
+ * @param  {Buffer}                        raw            Raw data
+ * @param  {Number}                        options.mcc    Mobile country code
+ * @param  {Number}                        options.mnc    Mobile network code
+ * @param  {String}                        options.apiKey Google api key
+ * @return {Promise<Object|Array<Object>>}                Parsed data with geolocation, gps and address
  */
 const parse = (raw, { mcc = 730, mnc = 1, apiKey = null } = {}) => {
   try {
@@ -161,6 +175,7 @@ const getRebootCommand = data => {
 module.exports = {
   getImei: getImei,
   setCache: setCache,
+  simpleParse: simpleParse,
   parse: parse,
   parseCommand: parseCommand,
   getRebootCommand: getRebootCommand,
