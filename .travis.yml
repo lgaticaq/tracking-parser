@@ -1,3 +1,4 @@
+---
 language: node_js
 sudo: false
 env:
@@ -5,12 +6,12 @@ env:
 addons:
   apt:
     sources:
-    - ubuntu-toolchain-r-test
+      - ubuntu-toolchain-r-test
     packages:
-    - g++-4.8
+      - g++-4.8
 node_js:
-  - '6'
   - '8'
+  - '9'
 notifications:
   email: false
 after_success:
