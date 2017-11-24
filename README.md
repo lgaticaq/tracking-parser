@@ -4,7 +4,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/tracking-parser.svg?style=flat-square)](https://www.npmjs.com/package/tracking-parser)
 [![Build Status](https://img.shields.io/travis/lgaticaq/tracking-parser.svg?style=flat-square)](https://travis-ci.org/lgaticaq/tracking-parser)
 [![Coverage Status](https://img.shields.io/coveralls/lgaticaq/tracking-parser/master.svg?style=flat-square)](https://coveralls.io/github/lgaticaq/tracking-parser?branch=master)
-[![Code Climate](https://img.shields.io/codeclimate/github/lgaticaq/tracking-parser.svg?style=flat-square)](https://codeclimate.com/github/lgaticaq/tracking-parser)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5c5e61696149ee2d3ebb/maintainability)](https://codeclimate.com/github/lgaticaq/tracking-parser/maintainability)
 [![dependency Status](https://img.shields.io/david/lgaticaq/tracking-parser.svg?style=flat-square)](https://david-dm.org/lgaticaq/tracking-parser#info=dependencies)
 [![devDependency Status](https://img.shields.io/david/dev/lgaticaq/tracking-parser.svg?style=flat-square)](https://david-dm.org/lgaticaq/tracking-parser#info=devDependencies)
 
