@@ -1,3 +1,18 @@
+### 2.2.0 (2017-12-28)
+
+##### Chores
+
+* **package:**  update dependencies ([adf68bf2](https://github.com/lgaticaq/tracking-parser/commit/adf68bf2c669fbf2f2f32c552cac2c00f14596c2))
+* **deps:**
+  *  update dependency eslint to v4.14.0 ([2065ecb4](https://github.com/lgaticaq/tracking-parser/commit/2065ecb49028a581fb4f9dde8bef4d692f26f7f9))
+  *  update dependency prettier-standard to v8.0.0 ([e7447100](https://github.com/lgaticaq/tracking-parser/commit/e7447100e32a74fd4ac3d4d0294b5cad03a8582b))
+  *  update dependency generate-changelog to v1.7.0 ([8f3d640e](https://github.com/lgaticaq/tracking-parser/commit/8f3d640e4ad7873ca05dfda2450ffb12816f33d1))
+  *  update dependency eslint to v4.13.1 ([41b30664](https://github.com/lgaticaq/tracking-parser/commit/41b30664474e76d3923ab9dd513da8b6742da366))
+  *  update dependency eslint to v4.13.0 ([ea20ee63](https://github.com/lgaticaq/tracking-parser/commit/ea20ee63b8f47f63743897dd2bb14f9532a50023))
+  *  update dependency lint-staged to v6.0.0 ([e9e86031](https://github.com/lgaticaq/tracking-parser/commit/e9e860316f3f0ba0b47b49944bdf0386b7718780))
+  *  update dependency eslint to v4.12.1 ([be397a9a](https://github.com/lgaticaq/tracking-parser/commit/be397a9addab41ca6420a50a7ad44964566a3d41))
+  *  update dependency eslint to v4.12.0 ([3f9e06dd](https://github.com/lgaticaq/tracking-parser/commit/3f9e06ddd0c16c84c76056eb8a1b6005c31434eb))
+
 ### 2.1.0 (2017-11-24)
 
 ##### New Features
