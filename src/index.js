@@ -172,6 +172,38 @@ const getRebootCommand = data => {
   return command
 }
 
+/**
+ * Get ack command
+ * @param  {Object} data manufacturer, counter and others
+ * @return {Object}      Raw command ack and limit
+ */
+const getAck = data => {
+  let ack
+  let limit
+  if (data.manufacturer === 'queclink') {
+    ack = Buffer.from(
+      queclink.getAckHeartBeat(data.protocolVersion, data.counter)
+    )
+    limit = queclink.limitAck || 65535
+  } else if (data.manufacturer === 'cellocator') {
+    ack = cellocator.ack(data.unitId, data.counter, data.serialId)
+    limit = cellocator.limitAck || 255
+  }
+  return { ack, limit }
+}
+
+/**
+ * Check if raw data is a HeartBeat
+ * @param  {Object} data manufacturer and raw data
+ * @return {Boolean}
+ */
+const isHeartBeat = data => {
+  if (data.manufacturer === 'queclink') {
+    return queclink.isHeartBeat(data.raw)
+  }
+  return false
+}
+
 module.exports = {
   getImei: getImei,
   setCache: setCache,
@@ -179,5 +211,7 @@ module.exports = {
   parse: parse,
   parseCommand: parseCommand,
   getRebootCommand: getRebootCommand,
-  getCellocatorAck: cellocator.ack
+  getCellocatorAck: cellocator.ack,
+  getAck: getAck,
+  isHeartBeat: isHeartBeat
 }

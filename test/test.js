@@ -553,4 +553,47 @@ describe('tracking-parser', () => {
         done()
       })
   })
+
+  it('should return a queclink ACK command', () => {
+    const data = {
+      manufacturer: 'queclink',
+      counter: 1,
+      protocolVersion: '270100'
+    }
+    const { ack, limit } = tracking.getAck(data)
+    expect(ack).to.eql(Buffer.from('+SACK:GTHBD,270100,1$'))
+    expect(limit).to.eql(65535)
+  })
+
+  it('should return a cellocator ACK command', () => {
+    const data = {
+      manufacturer: 'cellocator',
+      unitId: 836522,
+      counter: 1,
+      serialId: 80
+    }
+    const { ack, limit } = tracking.getAck(data)
+    expect(ack).to.eql(
+      Buffer.from(
+        '4D43475004AAC30C00010000000000500000000000000000000000CE',
+        'hex'
+      )
+    )
+    expect(limit).to.eql(255)
+  })
+
+  it('should return true a queclink hearbeat', () => {
+    const data = {
+      manufacturer: 'queclink',
+      raw: '+ACK:GTHBD,270100,1$'
+    }
+    const result = tracking.isHeartBeat(data)
+    expect(result).to.eql(true)
+  })
+
+  it('should return false a unknown hearbeat', () => {
+    const data = { raw: '+SACK:GTHBD,270100,1$' }
+    const result = tracking.isHeartBeat(data)
+    expect(result).to.eql(false)
+  })
 })
