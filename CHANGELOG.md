@@ -1,3 +1,10 @@
+#### 1.5.53 (2018-03-28)
+
+##### Chores
+
+* **git:** add .vscode to ignored ([aae2d16a](https://github.com/lgaticaq/tracking-parser/commit/aae2d16a7279b2eb7695bd59b7c3819670004334))
+* **package:** update queclink-parser to v1.0.5 ([2bfca660](https://github.com/lgaticaq/tracking-parser/commit/2bfca66099984b433a2613f9dd0ffcad4a8daa30))
+
 #### 1.5.52 (2018-01-30)
 
 ##### Chores
