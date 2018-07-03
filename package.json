@@ -41,11 +41,7 @@
   "dependencies": {
     "bluebird": "^3.5.0",
     "bscoords": "0.0.1",
-    "cellocator-parser": "^2.2.9",
-    "meitrack-parser": "^1.0.0",
-    "queclink-parser": "^1.0.6",
-    "simple-reverse-geocoder": "^1.2.2",
-    "tz-parser": "^3.1.2"
+    "simple-reverse-geocoder": "^1.2.2"
   },
   "devDependencies": {
     "chai": "^4.1.1",
@@ -62,6 +58,12 @@
     "mocha": "^3.5.0",
     "prettier-standard": "^6.0.0",
     "proxyquire": "^1.8.0"
+  },
+  "peerDependencies": {
+    "cellocator-parser": "^2.2.9",
+    "meitrack-parser": "^1.0.0",
+    "queclink-parser": "^1.0.6",
+    "tz-parser": "^3.1.2"
   },
   "eslintConfig": {
     "extends": "standard",
