@@ -1,3 +1,9 @@
+### 1.6.0 (2018-07-03)
+
+##### Other Changes
+
+* **package:** move device parser to peerDependencies ([bed827a4](https://github.com/lgaticaq/tracking-parser/commit/bed827a47f4a9534fce9a47cc2067a41ccfcda5e))
+
 #### 1.5.55 (2018-06-01)
 
 #### 1.5.54 (2018-06-01)
