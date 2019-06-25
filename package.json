@@ -57,7 +57,7 @@
     "istanbul": "0.4.5",
     "lint-staged": "7.3.0",
     "mocha": "5.2.0",
-    "prettier-standard": "8.0.1",
+    "prettier-standard": "10.0.0",
     "proxyquire": "1.8.0"
   },
   "eslintConfig": {
